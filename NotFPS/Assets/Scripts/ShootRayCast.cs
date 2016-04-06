@@ -1,15 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class ShootRayCast : MonoBehaviour {
 
     public GameObject fPSController;
+    public GameObject canvasObject;
+    public Sprite[] canvasImages;
+    private Image image;
     public float maxPowerDistance = 10.0f;
 
     // Use this for initialization
     void Start ()
     {
-        
+        image = GameObject.Find("Canvas").GetComponentInChildren<Image>();
+        image.sprite = canvasImages[2];
     }
 	
 	// Update is called once per frame
@@ -17,11 +22,17 @@ public class ShootRayCast : MonoBehaviour {
     {
         if (Input.GetMouseButtonDown(0))
         {
+            image.sprite = canvasImages[0];
             push();
         }
         if (Input.GetMouseButtonDown(1))
         {
+            image.sprite = canvasImages[1];
             pull();
+        }
+        if(Input.GetMouseButtonUp(0) || Input.GetMouseButtonUp(1))
+        {
+            image.sprite = canvasImages[2];
         }
     }
 
@@ -39,7 +50,7 @@ public class ShootRayCast : MonoBehaviour {
                 if (massDifference < 0)
                 {
 
-                    hit.transform.GetComponent<Rigidbody>().AddForce(transform.forward.normalized * ((Mathf.Abs(massDifference)) * 500));
+                    hit.transform.GetComponent<Rigidbody>().AddForce(transform.forward.normalized * ((Mathf.Abs(massDifference)) * 200));
                 }
                 else
                 {
@@ -61,7 +72,7 @@ public class ShootRayCast : MonoBehaviour {
                 float massDifference = hit.transform.GetComponent<Rigidbody>().mass - fPSController.GetComponent<Rigidbody>().mass;
                 if (massDifference < 0)
                 {
-                    hit.transform.GetComponent<Rigidbody>().AddForce(-transform.forward.normalized * ((Mathf.Abs(massDifference)) * 500));
+                    hit.transform.GetComponent<Rigidbody>().AddForce(-transform.forward.normalized * ((Mathf.Abs(massDifference)) * 200));
                 }
                 else
                 {
