@@ -16,15 +16,15 @@ public class ShootRayCast : MonoBehaviour {
     {
         if (Input.GetMouseButtonDown(0))
         {
-            pushOrPullForLeftMouseButton();
+            push();
         }
         if (Input.GetMouseButtonDown(1))
         {
-            pushOrPullForRightMouseButton();
+            pull();
         }
     }
 
-    void pushOrPullForLeftMouseButton()
+    void push()
     {
         RaycastHit hit;
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
@@ -34,19 +34,22 @@ public class ShootRayCast : MonoBehaviour {
             if(hit.transform.tag.Equals("Metal"))
             {
                 Debug.Log("hit " + hit.transform.tag);
-                if(hit.transform.GetComponent<Rigidbody>().mass < fPSController.GetComponent<Rigidbody>().mass)
+                float massDifference = hit.transform.GetComponent<Rigidbody>().mass - fPSController.GetComponent<Rigidbody>().mass;
+                if (massDifference < 0)
                 {
-                    hit.transform.GetComponent<Rigidbody>().AddForce(transform.forward * 500);
+
+                    hit.transform.GetComponent<Rigidbody>().AddForce(transform.forward * ((Mathf.Abs(massDifference)) * 500));
                 }
                 else
                 {
-                    fPSController.GetComponent<Rigidbody>().transform.Translate(-transform.forward * 5);
+                    fPSController.GetComponent<Rigidbody>().velocity = -transform.forward * 30;
+
                 }
             }
         }
     }
 
-    void pushOrPullForRightMouseButton()
+    void pull()
     {
         RaycastHit hit;
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
@@ -55,13 +58,14 @@ public class ShootRayCast : MonoBehaviour {
 
             if (hit.transform.tag.Equals("Metal"))
             {
-                if (hit.transform.GetComponent<Rigidbody>().mass < fPSController.GetComponent<Rigidbody>().mass)
+                float massDifference = hit.transform.GetComponent<Rigidbody>().mass - fPSController.GetComponent<Rigidbody>().mass;
+                if (massDifference < 0)
                 {
-                    hit.transform.GetComponent<Rigidbody>().AddForce(-transform.forward * 500);
+                    hit.transform.GetComponent<Rigidbody>().AddForce(-transform.forward * ((Mathf.Abs(massDifference)) * 500));
                 }
                 else
                 {
-                    fPSController.GetComponent<Rigidbody>().transform.Translate(transform.forward * 5);
+                    fPSController.GetComponent<Rigidbody>().velocity = transform.forward * 30;
                 }
             }
         }
