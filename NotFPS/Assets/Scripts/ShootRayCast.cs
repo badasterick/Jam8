@@ -9,12 +9,16 @@ public class ShootRayCast : MonoBehaviour {
     public Sprite[] canvasImages;
     private Image image;
     public float maxPowerDistance = 10.0f;
+    public AudioClip pushSound;
+    public AudioClip pullSound;
+    private AudioSource m_AudioSource;
 
     // Use this for initialization
     void Start ()
     {
         image = GameObject.Find("Canvas").GetComponentInChildren<Image>();
         image.sprite = canvasImages[2];
+        m_AudioSource = GetComponent<AudioSource>();
     }
 	
 	// Update is called once per frame
@@ -24,11 +28,15 @@ public class ShootRayCast : MonoBehaviour {
         {
             image.sprite = canvasImages[0];
             push();
+            m_AudioSource.clip = pushSound;
+            m_AudioSource.Play();
         }
         if (Input.GetMouseButtonDown(1))
         {
             image.sprite = canvasImages[1];
             pull();
+            m_AudioSource.clip = pullSound;
+            m_AudioSource.Play();
         }
         if(Input.GetMouseButtonUp(0) || Input.GetMouseButtonUp(1))
         {
