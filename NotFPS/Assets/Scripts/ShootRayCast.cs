@@ -17,7 +17,7 @@ public class ShootRayCast : MonoBehaviour {
     void Start ()
     {
         image = GameObject.Find("Canvas").GetComponentInChildren<Image>();
-        image.sprite = canvasImages[2];
+        //image.sprite = canvasImages[2];
         m_AudioSource = GetComponent<AudioSource>();
     }
 	
@@ -26,21 +26,21 @@ public class ShootRayCast : MonoBehaviour {
     {
         if (Input.GetMouseButtonDown(0))
         {
-            image.sprite = canvasImages[0];
+            //image.sprite = canvasImages[0];
             push();
             m_AudioSource.clip = pushSound;
             m_AudioSource.Play();
         }
         if (Input.GetMouseButtonDown(1))
         {
-            image.sprite = canvasImages[1];
+            //image.sprite = canvasImages[1];
             pull();
             m_AudioSource.clip = pullSound;
             m_AudioSource.Play();
         }
         if(Input.GetMouseButtonUp(0) || Input.GetMouseButtonUp(1))
         {
-            image.sprite = canvasImages[2];
+            //image.sprite = canvasImages[2];
         }
     }
 
