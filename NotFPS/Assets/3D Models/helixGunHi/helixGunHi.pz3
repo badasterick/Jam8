@@ -1,0 +1,13120 @@
+{
+
+version
+	{
+	number 4
+	}
+
+movieInfo
+	{
+	numFrames    30
+	loopStart    0
+	loopEnd      29
+	currentFrame 0
+	framesPerSec 30
+	outputWidth 640
+	outputHeight 480
+	outputFramesPerSec 30
+	outputStartFrame 0
+	outputEndFrame 29
+	useCustomFramesPerSec 0
+	renderStyle 0
+	outputType 1
+	res 1
+	movieName helixGunHi.pz3
+	bgMovieOn 0
+	}
+actor UNIVERSE
+	{
+
+	}
+prop GROUND
+	{
+	storageOffset 0 0.3487 0
+	geomResource 6  
+	}
+light LIGHT3
+	{
+	storageOffset 0 0.3487 0
+	geomResource 7  
+	}
+light LIGHT2
+	{
+	storageOffset 0 0.3487 0
+	geomResource 7  
+	}
+light LIGHT1
+	{
+	storageOffset 0 0.3487 0
+	geomResource 7  
+	}
+camera MAIN_CAMERA
+	{
+
+	}
+camera AUX_CAMERA
+	{
+
+	}
+camera POSE_CAMERA
+	{
+
+	}
+camera STD_CAMERA
+	{
+
+	}
+camera SIDE_CAMERA
+	{
+
+	}
+camera RIGHT_CAMERA
+	{
+
+	}
+camera TOP_CAMERA
+	{
+
+	}
+camera BOTTOM_CAMERA
+	{
+
+	}
+camera FRONT_CAMERA
+	{
+
+	}
+camera BACK_CAMERA
+	{
+
+	}
+camera FACE_CAMERA
+	{
+
+	}
+camera LHAND_CAMERA
+	{
+
+	}
+camera RHAND_CAMERA
+	{
+
+	}
+camera SHADOW_CAM_LITE1
+	{
+
+	}
+camera SHADOW_CAM_LITE2
+	{
+
+	}
+camera SHADOW_CAM_LITE3
+	{
+
+	}
+figureResFile :Runtime:Geometries:helixGunHi:helixGunHi.obj
+actor BODY:2
+	{
+
+	}
+actor gun:2
+	{
+	storageOffset 0 0 0
+	geomHandlerGeom 13 gun  
+	}
+actor lPin1:2
+	{
+	storageOffset 0 0 0
+	geomHandlerGeom 13 lPin1  
+	}
+actor lCanister1:2
+	{
+	storageOffset 0 0 0
+	geomHandlerGeom 13 lCanister1  
+	}
+actor lPin2:2
+	{
+	storageOffset 0 0 0
+	geomHandlerGeom 13 lPin2  
+	}
+actor lCanister2:2
+	{
+	storageOffset 0 0 0
+	geomHandlerGeom 13 lCanister2  
+	}
+actor lPin3:2
+	{
+	storageOffset 0 0 0
+	geomHandlerGeom 13 lPin3  
+	}
+actor lCanister3:2
+	{
+	storageOffset 0 0 0
+	geomHandlerGeom 13 lCanister3  
+	}
+actor rPin1:2
+	{
+	storageOffset 0 0 0
+	geomHandlerGeom 13 rPin1  
+	}
+actor rCanister1:2
+	{
+	storageOffset 0 0 0
+	geomHandlerGeom 13 rCanister1  
+	}
+actor rPin2:2
+	{
+	storageOffset 0 0 0
+	geomHandlerGeom 13 rPin2  
+	}
+actor rCanister2:2
+	{
+	storageOffset 0 0 0
+	geomHandlerGeom 13 rCanister2  
+	}
+actor rPin3:2
+	{
+	storageOffset 0 0 0
+	geomHandlerGeom 13 rPin3  
+	}
+actor rCanister3:2
+	{
+	storageOffset 0 0 0
+	geomHandlerGeom 13 rCanister3  
+	}
+
+actor UNIVERSE
+	{
+	name    GetStringRes(1026,10)
+	on
+	bend 1
+	dynamicsLock		1
+	hidden		1
+	addToMenu	0
+	castsShadow		1
+	includeInDepthCue		0
+	channels
+		{
+		}
+	endPoint 0 0 0
+	origin 0 0 0
+	orientation 0 0 0
+	displayOrigin		0
+	displayMode USEPARENT
+	customMaterial	0
+	locked 0
+	}
+
+prop GROUND
+	{
+	name    GetStringRes(1026,9)
+	on
+	bend 1
+	dynamicsLock		1
+	hidden		0
+	addToMenu	1
+	castsShadow		1
+	includeInDepthCue		0
+	parent UNIVERSE
+	channels
+		{
+		translateY dollyY
+			{
+			name GetStringRes(1028,26)
+			initValue 0.373
+			hidden 1
+			forceLimits 4
+			min 0.373
+			max 0.373
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0.373
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateY yaw
+			{
+			name GetStringRes(1028,23)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		propagatingScale scale
+			{
+			name GetStringRes(1028,5)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		propagatingScaleX xScale
+			{
+			name GetStringRes(1028,6)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		propagatingScaleZ zScale
+			{
+			name GetStringRes(1028,8)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateX dollyX
+			{
+			name GetStringRes(1028,25)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.001
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateZ dollyZ
+			{
+			name GetStringRes(1028,27)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.001
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		}
+	endPoint 0 1 0.6
+	origin 0 0 0
+	orientation 0 0 0
+	displayOrigin		0
+	displayMode USEPARENT
+	customMaterial	32
+	material Preview
+		{
+		KdColor 0.863294 0.863294 0.863294 1 
+		KaColor 0 0 0 1 
+		KsColor 0 0 0 1 
+		TextureColor 1 1 1 1 
+		NsExponent 10 
+		tMin 0 
+		tMax 0 
+		tExpo 0.6 
+		bumpStrength 1 
+		ksIgnoreTexture 0 
+		reflectThruLights 1 
+		reflectThruKd 0 
+		textureMap NO_MAP
+		bumpMap NO_MAP
+		reflectionMap NO_MAP
+		transparencyMap NO_MAP
+		ReflectionColor 1 1 1 1 
+		reflectionStrength 1 
+		}
+	presetMaterial Preview
+		{
+		KdColor 0.8 0.8 0.8 1 
+		KaColor 0 0 0 1 
+		KsColor 0 0 0 1 
+		TextureColor 1 1 1 1 
+		NsExponent 10 
+		tMin 0 
+		tMax 0 
+		tExpo 0.6 
+		bumpStrength 1 
+		ksIgnoreTexture 0 
+		reflectThruLights 1 
+		reflectThruKd 0 
+		textureMap "GetStringRes(1029,7)"
+ 				0 0 
+		bumpMap NO_MAP
+		reflectionMap NO_MAP
+		transparencyMap NO_MAP
+		ReflectionColor 1 1 1 1 
+		reflectionStrength 1 
+		}
+	locked 0
+	}
+
+light LIGHT3
+	{
+		storageOffset 0 0.3487 0
+	geomResource 7  
+	lightType 0 
+	name    GetStringRes(1027,3)
+	off
+	bend 1
+	dynamicsLock		1
+	hidden		0
+	addToMenu	1
+	castsShadow		1
+	includeInDepthCue		0
+	parent UNIVERSE
+	channels
+		{
+		depthMapStrength shadowStrength
+			{
+			name GetStringRes(1028,28)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0
+			max 1
+			trackingScale 0.01
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		depthMapSize depthMapSize
+			{
+			name GetStringRes(1028,29)
+			initValue 256
+			hidden 0
+			forceLimits 0
+			min 64
+			max 1024
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  256
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateX xrot
+			{
+			name GetStringRes(1028,9)
+			initValue 176.849
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  322.982
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateY yrot
+			{
+			name GetStringRes(1028,10)
+			initValue 68.7537
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  21.7704
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateZ zrot
+			{
+			name GetStringRes(1028,11)
+			initValue 172.764
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  -60.0019
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scale scale
+			{
+			name GetStringRes(1028,5)
+			initValue 0.55
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  0.55
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		kdRed RED
+			{
+			name GetStringRes(1028,19)
+			initValue 0.874998
+			hidden 0
+			forceLimits 0
+			min 0
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  0.183597
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		kdGreen GREEN
+			{
+			name GetStringRes(1028,20)
+			initValue 0.588968
+			hidden 0
+			forceLimits 0
+			min 0
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		kdBlue BLUE
+			{
+			name GetStringRes(1028,21)
+			initValue 0.381796
+			hidden 0
+			forceLimits 0
+			min 0
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  0.585946
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		kdIntensity INTENSITY
+			{
+			name GetStringRes(1028,22)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateX xtran
+			{
+			name GetStringRes(1028,12)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  0.178412
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateY ytran
+			{
+			name GetStringRes(1028,13)
+			initValue 0.375
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  -0.121514
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateZ ztran
+			{
+			name GetStringRes(1028,14)
+			initValue -100
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  -0.131924
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		}
+	endPoint 0 0 0.07
+	origin 0 0 0
+	orientation 0 0 0
+	displayOrigin		0
+	displayMode EDGESONLY
+	customMaterial	0
+	locked 0
+	depthMapSize 256 
+	depthCamera SHADOW_CAM_LITE3 
+	doShadow 1 
+	lightOn 1 
+	}
+
+light LIGHT2
+	{
+		storageOffset 0 0.3487 0
+	geomResource 7  
+	lightType 0 
+	name    GetStringRes(1027,2)
+	off
+	bend 1
+	dynamicsLock		1
+	hidden		0
+	addToMenu	1
+	castsShadow		1
+	includeInDepthCue		0
+	parent UNIVERSE
+	channels
+		{
+		depthMapStrength shadowStrength
+			{
+			name GetStringRes(1028,28)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0
+			max 1
+			trackingScale 0.01
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		depthMapSize depthMapSize
+			{
+			name GetStringRes(1028,29)
+			initValue 256
+			hidden 0
+			forceLimits 0
+			min 64
+			max 1024
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  256
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateX xrot
+			{
+			name GetStringRes(1028,9)
+			initValue -16.4875
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  -45.632
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateY yrot
+			{
+			name GetStringRes(1028,10)
+			initValue -34.387
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  -26.8898
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateZ zrot
+			{
+			name GetStringRes(1028,11)
+			initValue -18.1495
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  1.93334
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scale scale
+			{
+			name GetStringRes(1028,5)
+			initValue 0.55
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  0.55
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		kdRed RED
+			{
+			name GetStringRes(1028,19)
+			initValue 0.781262
+			hidden 0
+			forceLimits 0
+			min 0
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  0.781262
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		kdGreen GREEN
+			{
+			name GetStringRes(1028,20)
+			initValue 0.808606
+			hidden 0
+			forceLimits 0
+			min 0
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  0.808606
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		kdBlue BLUE
+			{
+			name GetStringRes(1028,21)
+			initValue 0.757824
+			hidden 0
+			forceLimits 0
+			min 0
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  0.757824
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		kdIntensity INTENSITY
+			{
+			name GetStringRes(1028,22)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateX xtran
+			{
+			name GetStringRes(1028,12)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  0.194355
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateY ytran
+			{
+			name GetStringRes(1028,13)
+			initValue 0.375
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  0.0133376
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateZ ztran
+			{
+			name GetStringRes(1028,14)
+			initValue -100
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  -0.0864411
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		}
+	endPoint 0 0 0.07
+	origin 0 0 0
+	orientation 0 0 0
+	displayOrigin		0
+	displayMode EDGESONLY
+	customMaterial	0
+	locked 0
+	depthMapSize 256 
+	depthCamera SHADOW_CAM_LITE2 
+	doShadow 1 
+	lightOn 1 
+	}
+
+light LIGHT1
+	{
+		storageOffset 0 0.3487 0
+	geomResource 7  
+	lightType 0 
+	name    GetStringRes(1027,1)
+	off
+	bend 1
+	dynamicsLock		1
+	hidden		0
+	addToMenu	1
+	castsShadow		1
+	includeInDepthCue		0
+	parent UNIVERSE
+	channels
+		{
+		depthMapStrength shadowStrength
+			{
+			name GetStringRes(1028,28)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0
+			max 1
+			trackingScale 0.01
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		depthMapSize depthMapSize
+			{
+			name GetStringRes(1028,29)
+			initValue 256
+			hidden 0
+			forceLimits 0
+			min 64
+			max 1024
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  256
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateX xrot
+			{
+			name GetStringRes(1028,9)
+			initValue 131.958
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  171.706
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateY yrot
+			{
+			name GetStringRes(1028,10)
+			initValue -46.217
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  -22.0621
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateZ zrot
+			{
+			name GetStringRes(1028,11)
+			initValue -150.84
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  -221.645
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scale scale
+			{
+			name GetStringRes(1028,5)
+			initValue 0.55
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  0.55
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		kdRed RED
+			{
+			name GetStringRes(1028,19)
+			initValue 0.493416
+			hidden 0
+			forceLimits 0
+			min 0
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  0.0585946
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		kdGreen GREEN
+			{
+			name GetStringRes(1028,20)
+			initValue 0.458671
+			hidden 0
+			forceLimits 0
+			min 0
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		kdBlue BLUE
+			{
+			name GetStringRes(1028,21)
+			initValue 0.247593
+			hidden 0
+			forceLimits 0
+			min 0
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  0.585946
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		kdIntensity INTENSITY
+			{
+			name GetStringRes(1028,22)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateX xtran
+			{
+			name GetStringRes(1028,12)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  0.178412
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateY ytran
+			{
+			name GetStringRes(1028,13)
+			initValue 0.375
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  -0.121514
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateZ ztran
+			{
+			name GetStringRes(1028,14)
+			initValue -100
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  -0.131924
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		}
+	endPoint 0 0 0.07
+	origin 0 0 0
+	orientation 0 0 0
+	displayOrigin		0
+	displayMode EDGESONLY
+	customMaterial	0
+	locked 0
+	depthMapSize 256 
+	depthCamera SHADOW_CAM_LITE1 
+	doShadow 1 
+	lightOn 1 
+	}
+
+camera MAIN_CAMERA
+	{
+	name    GetStringRes(1025,1)
+	on
+	bend 1
+	dynamicsLock		1
+	hidden		0
+	addToMenu	1
+	castsShadow		1
+	includeInDepthCue		0
+	parent UNIVERSE
+	channels
+		{
+		focal focal
+			{
+			name GetStringRes(1028,15)
+			initValue 38
+			hidden 0
+			forceLimits 4
+			min 0
+			max 100000
+			trackingScale 0.1
+			keys
+				{
+				static  0
+				k  0  38
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateZ dollyZ
+			{
+			name GetStringRes(1028,27)
+			initValue 0.2
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.001
+			keys
+				{
+				static  0
+				k  0  -0.452022
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateY dollyY
+			{
+			name GetStringRes(1028,26)
+			initValue 0.36
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.001
+			keys
+				{
+				static  0
+				k  0  0.0498418
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateX dollyX
+			{
+			name GetStringRes(1028,25)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.001
+			keys
+				{
+				static  0
+				k  0  0.0948144
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleZ zScale
+			{
+			name GetStringRes(1028,8)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleY yScale
+			{
+			name GetStringRes(1028,7)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleX xScale
+			{
+			name GetStringRes(1028,6)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scale scale
+			{
+			name GetStringRes(1028,5)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateZ roll
+			{
+			name GetStringRes(1028,41)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateX pitch
+			{
+			name GetStringRes(1028,39)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  -18
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateY yaw
+			{
+			name GetStringRes(1028,40)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  -43
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		}
+	endPoint 0 1 0
+	origin 0 0 0
+	orientation 0 0 0
+	displayOrigin		0
+	displayMode USEPARENT
+	customMaterial	0
+	locked 0
+	port 0 1 0 1	
+	cameraModel poser
+	}
+
+camera AUX_CAMERA
+	{
+	name    GetStringRes(1025,15)
+	off
+	bend 1
+	dynamicsLock		1
+	hidden		0
+	addToMenu	1
+	castsShadow		1
+	includeInDepthCue		0
+	parent UNIVERSE
+	channels
+		{
+		focal focal
+			{
+			name GetStringRes(1028,15)
+			initValue 25.4
+			hidden 0
+			forceLimits 4
+			min 0
+			max 100000
+			trackingScale 0.1
+			keys
+				{
+				static  0
+				k  0  25.4
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateZ dollyZ
+			{
+			name GetStringRes(1028,27)
+			initValue 1.285
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  1.285
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateY dollyY
+			{
+			name GetStringRes(1028,26)
+			initValue 0.217
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0.217
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateX dollyX
+			{
+			name GetStringRes(1028,25)
+			initValue -0.048
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  -0.048
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleZ zScale
+			{
+			name GetStringRes(1028,8)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleY yScale
+			{
+			name GetStringRes(1028,7)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleX xScale
+			{
+			name GetStringRes(1028,6)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scale scale
+			{
+			name GetStringRes(1028,5)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateZ roll
+			{
+			name GetStringRes(1028,41)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateX pitch
+			{
+			name GetStringRes(1028,39)
+			initValue -25
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  -25
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateY yaw
+			{
+			name GetStringRes(1028,40)
+			initValue -23
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  -23
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		}
+	endPoint 0 1 0
+	origin 0 0 0
+	orientation 0 0 0
+	displayOrigin		0
+	displayMode USEPARENT
+	customMaterial	0
+	locked 0
+	port 0 1 0 1	
+	cameraModel poser
+	}
+
+camera POSE_CAMERA
+	{
+	name    GetStringRes(1025,5)
+	off
+	bend 1
+	dynamicsLock		1
+	hidden		0
+	addToMenu	1
+	castsShadow		1
+	includeInDepthCue		0
+	parent UNIVERSE
+	channels
+		{
+		focal focal
+			{
+			name GetStringRes(1028,15)
+			initValue 25.4
+			hidden 0
+			forceLimits 4
+			min 0
+			max 100000
+			trackingScale 0.1
+			keys
+				{
+				static  1
+				k  0  25.4
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 25.4
+			}
+		translateZ dollyZ
+			{
+			name GetStringRes(1028,27)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0
+			}
+		translateY dollyY
+			{
+			name GetStringRes(1028,26)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0
+			}
+		translateX dollyX
+			{
+			name GetStringRes(1028,25)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0
+			}
+		scaleZ zScale
+			{
+			name GetStringRes(1028,8)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 1
+			}
+		scaleY yScale
+			{
+			name GetStringRes(1028,7)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 1
+			}
+		scaleX xScale
+			{
+			name GetStringRes(1028,6)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 1
+			}
+		scale scale
+			{
+			name GetStringRes(1028,5)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 1
+			}
+		rotateZ roll
+			{
+			name GetStringRes(1028,18)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0
+			}
+		rotateX pitch
+			{
+			name GetStringRes(1028,16)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0
+			}
+		rotateY yaw
+			{
+			name GetStringRes(1028,17)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0
+			}
+		translateZ zOffset
+			{
+			name GetStringRes(1028,38)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0
+			}
+		translateY yOffset
+			{
+			name GetStringRes(1028,37)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0
+			}
+		translateX xOffset
+			{
+			name GetStringRes(1028,36)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0
+			}
+		}
+	endPoint 0 1 0
+	origin 0 0 0
+	orientation 0 0 0
+	displayOrigin		0
+	displayMode USEPARENT
+	customMaterial	0
+	locked 0
+	port 0 1 0 1	
+	cameraModel poser
+	}
+
+camera STD_CAMERA
+	{
+	name    GetStringRes(1025,6)
+	off
+	bend 1
+	dynamicsLock		1
+	hidden		0
+	addToMenu	1
+	castsShadow		1
+	includeInDepthCue		0
+	parent UNIVERSE
+	channels
+		{
+		focal focal
+			{
+			name GetStringRes(1028,15)
+			initValue 35
+			hidden 0
+			forceLimits 4
+			min 0
+			max 100000
+			trackingScale 0.1
+			keys
+				{
+				static  0
+				k  0  35
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleZ zScale
+			{
+			name GetStringRes(1028,8)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleY yScale
+			{
+			name GetStringRes(1028,7)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleX xScale
+			{
+			name GetStringRes(1028,6)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scale scale
+			{
+			name GetStringRes(1028,5)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateZ roll
+			{
+			name GetStringRes(1028,18)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateX pitch
+			{
+			name GetStringRes(1028,16)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateY yaw
+			{
+			name GetStringRes(1028,17)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateZ dollyZ
+			{
+			name GetStringRes(1028,27)
+			initValue 1.5
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  1.5
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateY dollyY
+			{
+			name GetStringRes(1028,26)
+			initValue 0.375
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0.375
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateX dollyX
+			{
+			name GetStringRes(1028,25)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		}
+	endPoint 0 1 0
+	origin 0 0 0
+	orientation 0 0 0
+	displayOrigin		0
+	displayMode USEPARENT
+	customMaterial	0
+	locked 0
+	port 0 1 0 1	
+	cameraModel real
+	}
+
+camera SIDE_CAMERA
+	{
+	name    GetStringRes(1025,11)
+	off
+	bend 1
+	dynamicsLock		1
+	hidden		0
+	addToMenu	1
+	castsShadow		1
+	includeInDepthCue		0
+	parent UNIVERSE
+	channels
+		{
+		focal focal
+			{
+			name GetStringRes(1028,15)
+			initValue 0
+			hidden 1
+			forceLimits 4
+			min 0
+			max 100000
+			trackingScale 0.1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateZ dollyZ
+			{
+			name GetStringRes(1028,27)
+			initValue 100
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.001
+			keys
+				{
+				static  0
+				k  0  99.997
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateY dollyY
+			{
+			name GetStringRes(1028,26)
+			initValue 0.375
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.001
+			keys
+				{
+				static  0
+				k  0  0.0759999
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateX dollyX
+			{
+			name GetStringRes(1028,25)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.001
+			keys
+				{
+				static  0
+				k  0  0.395
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleZ zScale
+			{
+			name GetStringRes(1028,8)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleY yScale
+			{
+			name GetStringRes(1028,7)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleX xScale
+			{
+			name GetStringRes(1028,6)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scale scale
+			{
+			name GetStringRes(1028,5)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  0.18
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateZ zrot
+			{
+			name GetStringRes(1028,11)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateY yrot
+			{
+			name GetStringRes(1028,10)
+			initValue -90
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  -90
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateX xrot
+			{
+			name GetStringRes(1028,9)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		}
+	endPoint 0 0 0.6
+	origin 0 0 0
+	orientation 0 0 0
+	displayOrigin		0
+	displayMode USEPARENT
+	customMaterial	0
+	locked 0
+	port 0 1 0 1	
+	cameraModel poser
+	}
+
+camera RIGHT_CAMERA
+	{
+	name    GetStringRes(1025,10)
+	off
+	bend 1
+	dynamicsLock		1
+	hidden		0
+	addToMenu	1
+	castsShadow		1
+	includeInDepthCue		0
+	parent UNIVERSE
+	channels
+		{
+		focal focal
+			{
+			name GetStringRes(1028,15)
+			initValue 0
+			hidden 1
+			forceLimits 4
+			min 0
+			max 100000
+			trackingScale 0.1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateZ dollyZ
+			{
+			name GetStringRes(1028,27)
+			initValue 100
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.001
+			keys
+				{
+				static  0
+				k  0  100.038
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateY dollyY
+			{
+			name GetStringRes(1028,26)
+			initValue 0.375
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.001
+			keys
+				{
+				static  0
+				k  0  -0.017
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateX dollyX
+			{
+			name GetStringRes(1028,25)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.001
+			keys
+				{
+				static  0
+				k  0  -0.518
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleZ zScale
+			{
+			name GetStringRes(1028,8)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleY yScale
+			{
+			name GetStringRes(1028,7)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleX xScale
+			{
+			name GetStringRes(1028,6)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scale scale
+			{
+			name GetStringRes(1028,5)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  0.208
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateZ zrot
+			{
+			name GetStringRes(1028,11)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateY yrot
+			{
+			name GetStringRes(1028,10)
+			initValue 90
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  90
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateX xrot
+			{
+			name GetStringRes(1028,9)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		}
+	endPoint 0 0 0.6
+	origin 0 0 0
+	orientation 0 0 0
+	displayOrigin		0
+	displayMode USEPARENT
+	customMaterial	0
+	locked 0
+	port 0 1 0 1	
+	cameraModel poser
+	}
+
+camera TOP_CAMERA
+	{
+	name    GetStringRes(1025,3)
+	off
+	bend 1
+	dynamicsLock		1
+	hidden		0
+	addToMenu	1
+	castsShadow		1
+	includeInDepthCue		0
+	parent UNIVERSE
+	channels
+		{
+		focal focal
+			{
+			name GetStringRes(1028,15)
+			initValue 0
+			hidden 1
+			forceLimits 4
+			min 0
+			max 100000
+			trackingScale 0.1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateZ dollyZ
+			{
+			name GetStringRes(1028,27)
+			initValue 100
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  100
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateY dollyY
+			{
+			name GetStringRes(1028,26)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateX dollyX
+			{
+			name GetStringRes(1028,25)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleZ zScale
+			{
+			name GetStringRes(1028,8)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleY yScale
+			{
+			name GetStringRes(1028,7)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleX xScale
+			{
+			name GetStringRes(1028,6)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scale scale
+			{
+			name GetStringRes(1028,5)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateZ zrot
+			{
+			name GetStringRes(1028,11)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateY yrot
+			{
+			name GetStringRes(1028,10)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateX xrot
+			{
+			name GetStringRes(1028,9)
+			initValue -90
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  -90
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		}
+	endPoint 0 0 0.6
+	origin 0 0 0
+	orientation 0 0 0
+	displayOrigin		0
+	displayMode USEPARENT
+	customMaterial	0
+	locked 0
+	port 0 1 0 1	
+	cameraModel poser
+	}
+
+camera BOTTOM_CAMERA
+	{
+	name    GetStringRes(1025,17)
+	off
+	bend 1
+	dynamicsLock		1
+	hidden		0
+	addToMenu	1
+	castsShadow		1
+	includeInDepthCue		0
+	parent UNIVERSE
+	channels
+		{
+		focal focal
+			{
+			name GetStringRes(1028,15)
+			initValue 0
+			hidden 1
+			forceLimits 4
+			min 0
+			max 100000
+			trackingScale 0.1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateZ dollyZ
+			{
+			name GetStringRes(1028,27)
+			initValue 20
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  20
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateY dollyY
+			{
+			name GetStringRes(1028,26)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateX dollyX
+			{
+			name GetStringRes(1028,25)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleZ zScale
+			{
+			name GetStringRes(1028,8)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleY yScale
+			{
+			name GetStringRes(1028,7)
+			initValue 1
+			hidden 1
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleX xScale
+			{
+			name GetStringRes(1028,6)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scale scale
+			{
+			name GetStringRes(1028,5)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateZ zrot
+			{
+			name GetStringRes(1028,11)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateY yrot
+			{
+			name GetStringRes(1028,10)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateX xrot
+			{
+			name GetStringRes(1028,9)
+			initValue 90
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  90
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		}
+	endPoint 0 0 0.6
+	origin 0 0 0
+	orientation 0 0 0
+	displayOrigin		0
+	displayMode USEPARENT
+	customMaterial	0
+	locked 0
+	port 0 1 0 1	
+	cameraModel poser
+	}
+
+camera FRONT_CAMERA
+	{
+	name    GetStringRes(1025,4)
+	off
+	bend 1
+	dynamicsLock		1
+	hidden		0
+	addToMenu	1
+	castsShadow		1
+	includeInDepthCue		0
+	parent UNIVERSE
+	channels
+		{
+		focal focal
+			{
+			name GetStringRes(1028,15)
+			initValue 0
+			hidden 1
+			forceLimits 4
+			min 0
+			max 100000
+			trackingScale 0.1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateZ dollyZ
+			{
+			name GetStringRes(1028,27)
+			initValue 100
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.001
+			keys
+				{
+				static  0
+				k  0  100
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateY dollyY
+			{
+			name GetStringRes(1028,26)
+			initValue 0.375
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.001
+			keys
+				{
+				static  0
+				k  0  0.116
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateX dollyX
+			{
+			name GetStringRes(1028,25)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.001
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleZ zScale
+			{
+			name GetStringRes(1028,8)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleY yScale
+			{
+			name GetStringRes(1028,7)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleX xScale
+			{
+			name GetStringRes(1028,6)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scale scale
+			{
+			name GetStringRes(1028,5)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  0.172
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateZ zrot
+			{
+			name GetStringRes(1028,11)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateY yrot
+			{
+			name GetStringRes(1028,10)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateX xrot
+			{
+			name GetStringRes(1028,9)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		}
+	endPoint 0 0 0.6
+	origin 0 0 0
+	orientation 0 0 0
+	displayOrigin		0
+	displayMode USEPARENT
+	customMaterial	0
+	locked 0
+	port 0 1 0 1	
+	cameraModel poser
+	}
+
+camera BACK_CAMERA
+	{
+	name    GetStringRes(1025,16)
+	off
+	bend 1
+	dynamicsLock		1
+	hidden		0
+	addToMenu	1
+	castsShadow		1
+	includeInDepthCue		0
+	parent UNIVERSE
+	channels
+		{
+		focal focal
+			{
+			name GetStringRes(1028,15)
+			initValue 0
+			hidden 1
+			forceLimits 4
+			min 0
+			max 100000
+			trackingScale 0.1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateZ dollyZ
+			{
+			name GetStringRes(1028,27)
+			initValue 20
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  20
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateY dollyY
+			{
+			name GetStringRes(1028,26)
+			initValue 0.375
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0.375
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateX dollyX
+			{
+			name GetStringRes(1028,25)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleZ zScale
+			{
+			name GetStringRes(1028,8)
+			initValue 1
+			hidden 1
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleY yScale
+			{
+			name GetStringRes(1028,7)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleX xScale
+			{
+			name GetStringRes(1028,6)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scale scale
+			{
+			name GetStringRes(1028,5)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateZ zrot
+			{
+			name GetStringRes(1028,11)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateY yrot
+			{
+			name GetStringRes(1028,10)
+			initValue -180
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  -180
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateX xrot
+			{
+			name GetStringRes(1028,9)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		}
+	endPoint 0 0 0.6
+	origin 0 0 0
+	orientation 0 0 0
+	displayOrigin		0
+	displayMode USEPARENT
+	customMaterial	0
+	locked 0
+	port 0 1 0 1	
+	cameraModel poser
+	}
+
+camera FACE_CAMERA
+	{
+	name    GetStringRes(1025,12)
+	off
+	bend 1
+	dynamicsLock		1
+	hidden		0
+	addToMenu	1
+	castsShadow		1
+	includeInDepthCue		0
+	parent UNIVERSE
+	channels
+		{
+		focal focal
+			{
+			name GetStringRes(1028,15)
+			initValue 25.4
+			hidden 0
+			forceLimits 4
+			min 0
+			max 100000
+			trackingScale 0.1
+			keys
+				{
+				static  1
+				k  0  25.4
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 25.4
+			}
+		translateZ dollyZ
+			{
+			name GetStringRes(1028,27)
+			initValue -0.92
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  -0.92
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateY dollyY
+			{
+			name GetStringRes(1028,26)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateX dollyX
+			{
+			name GetStringRes(1028,25)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateZ roll
+			{
+			name GetStringRes(1028,18)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0
+			}
+		rotateX pitch
+			{
+			name GetStringRes(1028,16)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0
+			}
+		rotateY yaw
+			{
+			name GetStringRes(1028,17)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0
+			}
+		translateZ zOffset
+			{
+			name GetStringRes(1028,38)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0
+			}
+		translateY yOffset
+			{
+			name GetStringRes(1028,37)
+			initValue 0.64
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  1
+				k  0  0.64
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue -0.64
+			}
+		translateX xOffset
+			{
+			name GetStringRes(1028,36)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0
+			}
+		}
+	endPoint 0 1 0
+	origin 0 0 0
+	orientation 0 0 0
+	displayOrigin		0
+	displayMode USEPARENT
+	customMaterial	0
+	locked 0
+	port 0 1 0 1	
+	cameraModel poser
+	}
+
+camera LHAND_CAMERA
+	{
+	name    GetStringRes(1025,13)
+	off
+	bend 1
+	dynamicsLock		1
+	hidden		0
+	addToMenu	1
+	castsShadow		1
+	includeInDepthCue		0
+	parent UNIVERSE
+	channels
+		{
+		focal focal
+			{
+			name GetStringRes(1028,15)
+			initValue 25.4
+			hidden 0
+			forceLimits 4
+			min 0
+			max 100000
+			trackingScale 0.1
+			keys
+				{
+				static  1
+				k  0  25.4
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 25.4
+			}
+		translateZ dollyZ
+			{
+			name GetStringRes(1028,27)
+			initValue -0.92
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  -0.92
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateY dollyY
+			{
+			name GetStringRes(1028,26)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateX dollyX
+			{
+			name GetStringRes(1028,25)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateZ roll
+			{
+			name GetStringRes(1028,18)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0
+			}
+		rotateX pitch
+			{
+			name GetStringRes(1028,16)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0
+			}
+		rotateY yaw
+			{
+			name GetStringRes(1028,17)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0
+			}
+		translateZ zOffset
+			{
+			name GetStringRes(1028,38)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0
+			}
+		translateY yOffset
+			{
+			name GetStringRes(1028,37)
+			initValue 0.64
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  1
+				k  0  0.64
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue -0.64
+			}
+		translateX xOffset
+			{
+			name GetStringRes(1028,36)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0
+			}
+		}
+	endPoint 0 1 0
+	origin 0 0 0
+	orientation 0 0 0
+	displayOrigin		0
+	displayMode USEPARENT
+	customMaterial	0
+	locked 0
+	port 0 1 0 1	
+	cameraModel poser
+	}
+
+camera RHAND_CAMERA
+	{
+	name    GetStringRes(1025,14)
+	off
+	bend 1
+	dynamicsLock		1
+	hidden		0
+	addToMenu	1
+	castsShadow		1
+	includeInDepthCue		0
+	parent UNIVERSE
+	channels
+		{
+		focal focal
+			{
+			name GetStringRes(1028,15)
+			initValue 25.4
+			hidden 0
+			forceLimits 4
+			min 0
+			max 100000
+			trackingScale 0.1
+			keys
+				{
+				static  1
+				k  0  25.4
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 25.4
+			}
+		translateZ dollyZ
+			{
+			name GetStringRes(1028,27)
+			initValue -0.92
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  -0.92
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateY dollyY
+			{
+			name GetStringRes(1028,26)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateX dollyX
+			{
+			name GetStringRes(1028,25)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateZ roll
+			{
+			name GetStringRes(1028,18)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0
+			}
+		rotateX pitch
+			{
+			name GetStringRes(1028,16)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0
+			}
+		rotateY yaw
+			{
+			name GetStringRes(1028,17)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0
+			}
+		translateZ zOffset
+			{
+			name GetStringRes(1028,38)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0
+			}
+		translateY yOffset
+			{
+			name GetStringRes(1028,37)
+			initValue 0.64
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  1
+				k  0  0.64
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue -0.64
+			}
+		translateX xOffset
+			{
+			name GetStringRes(1028,36)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0
+			}
+		}
+	endPoint 0 1 0
+	origin 0 0 0
+	orientation 0 0 0
+	displayOrigin		0
+	displayMode USEPARENT
+	customMaterial	0
+	locked 0
+	port 0 1 0 1	
+	cameraModel poser
+	}
+
+camera SHADOW_CAM_LITE1
+	{
+	name    GetStringRes(1025,7)
+	off
+	bend 1
+	dynamicsLock		1
+	hidden		0
+	addToMenu	1
+	castsShadow		1
+	includeInDepthCue		0
+	parent LIGHT1
+	channels
+		{
+		focal focal
+			{
+			name GetStringRes(1028,15)
+			initValue 0
+			hidden 1
+			forceLimits 4
+			min 0
+			max 100000
+			trackingScale 0.1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		camAutoScale autoScale
+			{
+			name autoScale
+			initValue 1
+			hidden 1
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  0.429645
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scale scale
+			{
+			name GetStringRes(1028,32)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 1e-006
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateY ytran
+			{
+			name GetStringRes(1028,31)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateX xtran
+			{
+			name GetStringRes(1028,30)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		camAutoCenterY autoCenterY
+			{
+			name autoY
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0.090715
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		camAutoCenterX autoCenterX
+			{
+			name autoX
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0.109301
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateZ ztran
+			{
+			name GetStringRes(1028,14)
+			initValue 100
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  -100
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		}
+	endPoint 0 1 0
+	origin 0 0 0
+	orientation 0 0 0
+	displayOrigin		0
+	displayMode USEPARENT
+	customMaterial	0
+	locked 0
+	port 0 1 0 1	
+	cameraModel depth
+	}
+
+camera SHADOW_CAM_LITE2
+	{
+	name    GetStringRes(1025,8)
+	off
+	bend 1
+	dynamicsLock		1
+	hidden		0
+	addToMenu	1
+	castsShadow		1
+	includeInDepthCue		0
+	parent LIGHT2
+	channels
+		{
+		focal focal
+			{
+			name GetStringRes(1028,15)
+			initValue 0
+			hidden 1
+			forceLimits 4
+			min 0
+			max 100000
+			trackingScale 0.1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		camAutoScale autoScale
+			{
+			name autoScale
+			initValue 1
+			hidden 1
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  0.467379
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scale scale
+			{
+			name GetStringRes(1028,32)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 1e-006
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateY ytran
+			{
+			name GetStringRes(1028,31)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateX xtran
+			{
+			name GetStringRes(1028,30)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		camAutoCenterY autoCenterY
+			{
+			name autoY
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0.000862762
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		camAutoCenterX autoCenterX
+			{
+			name autoX
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0.0559275
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateZ ztran
+			{
+			name GetStringRes(1028,14)
+			initValue 100
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  -100
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		}
+	endPoint 0 1 0
+	origin 0 0 0
+	orientation 0 0 0
+	displayOrigin		0
+	displayMode USEPARENT
+	customMaterial	0
+	locked 0
+	port 0 1 0 1	
+	cameraModel depth
+	}
+
+camera SHADOW_CAM_LITE3
+	{
+	name    GetStringRes(1025,9)
+	off
+	bend 1
+	dynamicsLock		1
+	hidden		0
+	addToMenu	1
+	castsShadow		1
+	includeInDepthCue		0
+	parent LIGHT3
+	channels
+		{
+		focal focal
+			{
+			name GetStringRes(1028,15)
+			initValue 0
+			hidden 1
+			forceLimits 4
+			min 0
+			max 100000
+			trackingScale 0.1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		camAutoScale autoScale
+			{
+			name autoScale
+			initValue 1
+			hidden 1
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  0.47156
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scale scale
+			{
+			name GetStringRes(1028,32)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 1e-006
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateY ytran
+			{
+			name GetStringRes(1028,31)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateX xtran
+			{
+			name GetStringRes(1028,30)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		camAutoCenterY autoCenterY
+			{
+			name autoY
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  -0.00253683
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		camAutoCenterX autoCenterX
+			{
+			name autoX
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  -0.128607
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateZ ztran
+			{
+			name GetStringRes(1028,14)
+			initValue 100
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  -100
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		}
+	endPoint 0 1 0
+	origin 0 0 0
+	orientation 0 0 0
+	displayOrigin		0
+	displayMode USEPARENT
+	customMaterial	0
+	locked 0
+	port 0 1 0 1	
+	cameraModel depth
+	}
+figureResFile :Runtime:Geometries:helixGunHi:helixGunHi.obj
+
+actor BODY:2
+	{
+	name    GetStringRes(1024,1)
+	off
+	bend 1
+	dynamicsLock		1
+	hidden		0
+	addToMenu	1
+	castsShadow		1
+	includeInDepthCue		1
+	parent UNIVERSE
+	channels
+		{
+		zOffsetA zOffset
+			{
+			name GetStringRes(1028,38)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0
+			}
+		yOffsetA yOffset
+			{
+			name GetStringRes(1028,37)
+			initValue 0.74
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0.74
+			}
+		xOffsetA xOffset
+			{
+			name GetStringRes(1028,36)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0
+			}
+		propagatingScale scale
+			{
+			name GetStringRes(1028,5)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		propagatingScaleX xScale
+			{
+			name GetStringRes(1028,6)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		propagatingScaleY yScale
+			{
+			name GetStringRes(1028,7)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		propagatingScaleZ zScale
+			{
+			name GetStringRes(1028,8)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.001
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateY yrot
+			{
+			name GetStringRes(1028,10)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateX xrot
+			{
+			name GetStringRes(1028,9)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateZ zrot
+			{
+			name GetStringRes(1028,11)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateX xtran
+			{
+			name GetStringRes(1028,12)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateY ytran
+			{
+			name GetStringRes(1028,13)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateZ ztran
+			{
+			name GetStringRes(1028,14)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		xOffsetB xTranB
+			{
+			name GetStringRes(1028,33)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0
+			}
+		yOffsetB yTranB
+			{
+			name GetStringRes(1028,34)
+			initValue -0.74
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue -0.74
+			}
+		zOffsetB zTranB
+			{
+			name GetStringRes(1028,35)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0
+			}
+		}
+	endPoint 0 0.74 0.25
+	origin 0 0.74 0
+	orientation 0 0 0
+	displayOrigin		0
+	displayMode USEPARENT
+	customMaterial	0
+	locked 0
+	}
+
+actor gun:2
+	{
+	name    gun
+	on
+	bend 0
+	dynamicsLock		1
+	hidden		0
+	addToMenu	1
+	castsShadow		1
+	includeInDepthCue		1
+	parent BODY:2
+	channels
+		{
+		twistY lPin1_twisty
+			{
+			name lPin1_twisty
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			otherActor lPin1:2
+			matrixActor NULL
+			center 0.0534 0.00637236 0.0171
+			startPt 0.055116
+			endPt -0.0057
+			flipped
+			calcWeights
+			}
+		jointZ lPin1_jointz
+			{
+			name lPin1_jointz
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 45 -45 -135 135
+			otherActor lPin1:2
+			matrixActor NULL
+			center 0.0534 0.00637236 0.0171
+			flipped
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		jointX lPin1_jointx
+			{
+			name lPin1_jointx
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 45 -45 -135 135
+			otherActor lPin1:2
+			matrixActor NULL
+			center 0.0534 0.00637236 0.0171
+			flipped
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		twistY lPin2_twisty
+			{
+			name lPin2_twisty
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			otherActor lPin2:2
+			matrixActor NULL
+			center 0.0606 0.00281689 0.0765
+			startPt 0.051516
+			endPt -0.0093
+			flipped
+			calcWeights
+			}
+		jointZ lPin2_jointz
+			{
+			name lPin2_jointz
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 45 -45 -135 135
+			otherActor lPin2:2
+			matrixActor NULL
+			center 0.0606 0.00281689 0.0765
+			flipped
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		jointX lPin2_jointx
+			{
+			name lPin2_jointx
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 45 -45 -135 135
+			otherActor lPin2:2
+			matrixActor NULL
+			center 0.0606 0.00281689 0.0765
+			flipped
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		twistY lPin3_twisty
+			{
+			name lPin3_twisty
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			otherActor lPin3:2
+			matrixActor NULL
+			center 0.0620895 0.00767092 0.1341
+			startPt 0.057216
+			endPt -0.0036
+			flipped
+			calcWeights
+			}
+		jointZ lPin3_jointz
+			{
+			name lPin3_jointz
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 45 -45 -135 135
+			otherActor lPin3:2
+			matrixActor NULL
+			center 0.0620895 0.00767092 0.1341
+			flipped
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		jointX lPin3_jointx
+			{
+			name lPin3_jointx
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 45 -45 -135 135
+			otherActor lPin3:2
+			matrixActor NULL
+			center 0.0620895 0.00767092 0.1341
+			flipped
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		twistY rPin1_twisty
+			{
+			name rPin1_twisty
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			otherActor rPin1:2
+			matrixActor NULL
+			center -0.0537105 0.00606189 0.0171
+			startPt 0.055116
+			endPt -0.0057
+			flipped
+			calcWeights
+			}
+		jointZ rPin1_jointz
+			{
+			name rPin1_jointz
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 45 -45 -135 135
+			otherActor rPin1:2
+			matrixActor NULL
+			center -0.0537105 0.00606189 0.0171
+			flipped
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		jointX rPin1_jointx
+			{
+			name rPin1_jointx
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 45 -45 -135 135
+			otherActor rPin1:2
+			matrixActor NULL
+			center -0.0537105 0.00606189 0.0171
+			flipped
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		twistY rPin2_twisty
+			{
+			name rPin2_twisty
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			otherActor rPin2:2
+			matrixActor NULL
+			center -0.0609661 0.00277236 0.0765
+			startPt 0.051516
+			endPt -0.0093
+			flipped
+			calcWeights
+			}
+		jointZ rPin2_jointz
+			{
+			name rPin2_jointz
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 45 -45 -135 135
+			otherActor rPin2:2
+			matrixActor NULL
+			center -0.0609661 0.00277236 0.0765
+			flipped
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		jointX rPin2_jointx
+			{
+			name rPin2_jointx
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 45 -45 -135 135
+			otherActor rPin2:2
+			matrixActor NULL
+			center -0.0609661 0.00277236 0.0765
+			flipped
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		twistY rPin3_twisty
+			{
+			name rPin3_twisty
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			otherActor rPin3:2
+			matrixActor NULL
+			center -0.0627105 0.00857254 0.1341
+			startPt 0.057216
+			endPt -0.0036
+			flipped
+			calcWeights
+			}
+		jointZ rPin3_jointz
+			{
+			name rPin3_jointz
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 45 -45 -135 135
+			otherActor rPin3:2
+			matrixActor NULL
+			center -0.0627105 0.00857254 0.1341
+			flipped
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		jointX rPin3_jointx
+			{
+			name rPin3_jointx
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 45 -45 -135 135
+			otherActor rPin3:2
+			matrixActor NULL
+			center -0.0627105 0.00857254 0.1341
+			flipped
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		taperZ taper
+			{
+			name GetStringRes(1028,1)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.04
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		smoothScaleY lPin1_smooY
+			{
+			name lPin1_scaleY
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			smoothZones 0.030002 0.03518 99 100
+			otherActor lPin1:2
+			calcWeights
+			}
+		smoothScaleY lPin2_smooY
+			{
+			name lPin2_scaleY
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			smoothZones 0.027601 0.033981 99 100
+			otherActor lPin2:2
+			calcWeights
+			}
+		smoothScaleY lPin3_smooY
+			{
+			name lPin3_scaleY
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			smoothZones 0.031403 0.03588 99 100
+			otherActor lPin3:2
+			calcWeights
+			}
+		smoothScaleY rPin1_smooY
+			{
+			name rPin1_scaleY
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			smoothZones 0.030002 0.03518 99 100
+			otherActor rPin1:2
+			calcWeights
+			}
+		smoothScaleY rPin2_smooY
+			{
+			name rPin2_scaleY
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			smoothZones 0.027601 0.033981 99 100
+			otherActor rPin2:2
+			calcWeights
+			}
+		smoothScaleY rPin3_smooY
+			{
+			name rPin3_scaleY
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			smoothZones 0.031403 0.03588 99 100
+			otherActor rPin3:2
+			calcWeights
+			}
+		zOffsetA zOffset
+			{
+			name GetStringRes(1028,38)
+			initValue 0.117
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0.117
+			}
+		yOffsetA yOffset
+			{
+			name GetStringRes(1028,37)
+			initValue 0.03
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0.03
+			}
+		xOffsetA xOffset
+			{
+			name GetStringRes(1028,36)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0
+			}
+		scale scale
+			{
+			name GetStringRes(1028,5)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleX xScale
+			{
+			name GetStringRes(1028,6)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleY yScale
+			{
+			name GetStringRes(1028,7)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleZ zScale
+			{
+			name GetStringRes(1028,8)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateZ zrot
+			{
+			name GetStringRes(1028,11)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -360000
+			max 360000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateY yrot
+			{
+			name GetStringRes(1028,10)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -360000
+			max 360000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateX xrot
+			{
+			name GetStringRes(1028,9)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -360000
+			max 360000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		xOffsetB xTranB
+			{
+			name GetStringRes(1028,33)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0
+			}
+		yOffsetB yTranB
+			{
+			name GetStringRes(1028,34)
+			initValue -0.03
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue -0.03
+			}
+		zOffsetB zTranB
+			{
+			name GetStringRes(1028,35)
+			initValue -0.117
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue -0.117
+			}
+		translateX xtran
+			{
+			name GetStringRes(1028,12)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.001
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateY ytran
+			{
+			name GetStringRes(1028,13)
+			initValue 0.066
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.001
+			keys
+				{
+				static  0
+				k  0  0.066
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateZ ztran
+			{
+			name GetStringRes(1028,14)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.001
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		}
+	endPoint 0.0606 0.00281689 0.0765
+	origin 0 0.03 0.117
+	orientation 0 0 0
+	displayOrigin		0
+	displayMode USEPARENT
+	customMaterial	0
+	locked 0
+	}
+
+actor lPin1:2
+	{
+	name    lPin1
+	on
+	bend 0
+	dynamicsLock		0
+	hidden		0
+	addToMenu	1
+	castsShadow		1
+	includeInDepthCue		1
+	parent gun:2
+	channels
+		{
+		twistY lCanister1_twisty
+			{
+			name lCanister1_twisty
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			otherActor lCanister1:2
+			matrixActor NULL
+			center 0.0530895 0.00609782 0.0171
+			startPt -0.0057
+			endPt 0.067351
+			flipped
+			calcWeights
+			}
+		jointZ lCanister1_jointz
+			{
+			name lCanister1_jointz
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 235 135 45 315
+			otherActor lCanister1:2
+			matrixActor NULL
+			center 0.0530895 0.00609782 0.0171
+			flipped
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		jointX lCanister1_jointx
+			{
+			name lCanister1_jointx
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 235 135 45 315
+			otherActor lCanister1:2
+			matrixActor NULL
+			center 0.0530895 0.00609782 0.0171
+			flipped
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		taperY taper
+			{
+			name GetStringRes(1028,1)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.04
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		smoothScaleY lCanister1_smooY
+			{
+			name lCanister1_scaleY
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			smoothZones -100 -99 0.026833 0.028832
+			otherActor lCanister1:2
+			calcWeights
+			}
+		smoothScaleZ gun_smooZ
+			{
+			name gun_scaleZ
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			smoothZones -100 -99 0.050272 0.083543
+			otherActor gun:2
+			flipped
+			calcWeights
+			}
+		zOffsetA zOffset
+			{
+			name GetStringRes(1028,38)
+			initValue 0.0171
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0.0171
+			}
+		yOffsetA yOffset
+			{
+			name GetStringRes(1028,37)
+			initValue 0.00637236
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0.00637236
+			}
+		xOffsetA xOffset
+			{
+			name GetStringRes(1028,36)
+			initValue 0.0534
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0.0534
+			}
+		scale scale
+			{
+			name GetStringRes(1028,5)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleX xScale
+			{
+			name GetStringRes(1028,6)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleY yScale
+			{
+			name GetStringRes(1028,7)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleZ zScale
+			{
+			name GetStringRes(1028,8)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		jointX jointx
+			{
+			name jointx
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 45 -45 -135 135
+			otherActor gun:2
+			matrixActor NULL
+			center 0.0534 0.00637236 0.0171
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		jointZ jointz
+			{
+			name jointz
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 45 -45 -135 135
+			otherActor gun:2
+			matrixActor NULL
+			center 0.0534 0.00637236 0.0171
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		twistY twisty
+			{
+			name twist
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			otherActor gun:2
+			matrixActor NULL
+			center 0.0534 0.00637236 0.0171
+			startPt 0.055116
+			endPt -0.0057
+			calcWeights
+			}
+		rotateY yrot
+			{
+			name GetStringRes(1028,10)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -360000
+			max 360000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateZ zrot
+			{
+			name GetStringRes(1028,11)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -360000
+			max 360000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  -30
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateX xrot
+			{
+			name GetStringRes(1028,9)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -360000
+			max 360000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		xOffsetB xTranB
+			{
+			name GetStringRes(1028,33)
+			initValue -0.0534
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue -0.0534
+			}
+		yOffsetB yTranB
+			{
+			name GetStringRes(1028,34)
+			initValue -0.00637236
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue -0.00637236
+			}
+		zOffsetB zTranB
+			{
+			name GetStringRes(1028,35)
+			initValue -0.0171
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue -0.0171
+			}
+		translateX xtran
+			{
+			name GetStringRes(1028,12)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateY ytran
+			{
+			name GetStringRes(1028,13)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateZ ztran
+			{
+			name GetStringRes(1028,14)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		}
+	endPoint 0.0534 -0.0057 0.0171
+	origin 0.0534 0.00637236 0.0171
+	orientation 0 0 0
+	displayOrigin		0
+	displayMode USEPARENT
+	customMaterial	0
+	locked 0
+	}
+
+actor lCanister1:2
+	{
+	name    lCanister1
+	on
+	bend 0
+	dynamicsLock		0
+	hidden		0
+	addToMenu	1
+	castsShadow		1
+	includeInDepthCue		1
+	parent lPin1:2
+	channels
+		{
+		taperY taper
+			{
+			name GetStringRes(1028,1)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.04
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		smoothScaleY lPin1_smooY
+			{
+			name lPin1_scaleY
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			smoothZones 0.026833 0.028832 99 100
+			otherActor lPin1:2
+			flipped
+			calcWeights
+			}
+		zOffsetA zOffset
+			{
+			name GetStringRes(1028,38)
+			initValue 0.0171
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0.0171
+			}
+		yOffsetA yOffset
+			{
+			name GetStringRes(1028,37)
+			initValue 0.00609782
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0.00609782
+			}
+		xOffsetA xOffset
+			{
+			name GetStringRes(1028,36)
+			initValue 0.0530895
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0.0530895
+			}
+		scale scale
+			{
+			name GetStringRes(1028,5)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleX xScale
+			{
+			name GetStringRes(1028,6)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleY yScale
+			{
+			name GetStringRes(1028,7)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleZ zScale
+			{
+			name GetStringRes(1028,8)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		jointX jointx
+			{
+			name jointx
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 235 135 45 315
+			otherActor lPin1:2
+			matrixActor NULL
+			center 0.0530895 0.00609782 0.0171
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		jointZ jointz
+			{
+			name jointz
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 235 135 45 315
+			otherActor lPin1:2
+			matrixActor NULL
+			center 0.0530895 0.00609782 0.0171
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		twistY twisty
+			{
+			name twist
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			otherActor lPin1:2
+			matrixActor NULL
+			center 0.0530895 0.00609782 0.0171
+			startPt -0.0057
+			endPt 0.067351
+			calcWeights
+			}
+		rotateY yrot
+			{
+			name GetStringRes(1028,10)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -360000
+			max 360000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateZ zrot
+			{
+			name GetStringRes(1028,11)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -360000
+			max 360000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateX xrot
+			{
+			name GetStringRes(1028,9)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -360000
+			max 360000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		xOffsetB xTranB
+			{
+			name GetStringRes(1028,33)
+			initValue -0.0530895
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue -0.0530895
+			}
+		yOffsetB yTranB
+			{
+			name GetStringRes(1028,34)
+			initValue -0.00609782
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue -0.00609782
+			}
+		zOffsetB zTranB
+			{
+			name GetStringRes(1028,35)
+			initValue -0.0171
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue -0.0171
+			}
+		translateX xtran
+			{
+			name GetStringRes(1028,12)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateY ytran
+			{
+			name GetStringRes(1028,13)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateZ ztran
+			{
+			name GetStringRes(1028,14)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		}
+	endPoint 0.0534 0.067351 0.0171
+	origin 0.0530895 0.00609782 0.0171
+	orientation 0 0 0
+	displayOrigin		0
+	displayMode USEPARENT
+	customMaterial	0
+	locked 0
+	}
+
+actor lPin2:2
+	{
+	name    lPin2
+	on
+	bend 0
+	dynamicsLock		0
+	hidden		0
+	addToMenu	1
+	castsShadow		1
+	includeInDepthCue		1
+	parent gun:2
+	channels
+		{
+		twistY lCanister2_twisty
+			{
+			name lCanister2_twisty
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			otherActor lCanister2:2
+			matrixActor NULL
+			center 0.0606557 0.0026681 0.0765
+			startPt -0.0093
+			endPt 0.063751
+			flipped
+			calcWeights
+			}
+		jointZ lCanister2_jointz
+			{
+			name lCanister2_jointz
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 235 135 45 315
+			otherActor lCanister2:2
+			matrixActor NULL
+			center 0.0606557 0.0026681 0.0765
+			flipped
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		jointX lCanister2_jointx
+			{
+			name lCanister2_jointx
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 235 135 45 315
+			otherActor lCanister2:2
+			matrixActor NULL
+			center 0.0606557 0.0026681 0.0765
+			flipped
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		taperY taper
+			{
+			name GetStringRes(1028,1)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.04
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		smoothScaleY lCanister2_smooY
+			{
+			name lCanister2_scaleY
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			smoothZones -100 -99 0.023233 0.025232
+			otherActor lCanister2:2
+			calcWeights
+			}
+		smoothScaleZ gun_smooZ
+			{
+			name gun_scaleZ
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			smoothZones -100 -99 0.089892 0.103323
+			otherActor gun:2
+			flipped
+			calcWeights
+			}
+		zOffsetA zOffset
+			{
+			name GetStringRes(1028,38)
+			initValue 0.0765
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0.0765
+			}
+		yOffsetA yOffset
+			{
+			name GetStringRes(1028,37)
+			initValue 0.00281689
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0.00281689
+			}
+		xOffsetA xOffset
+			{
+			name GetStringRes(1028,36)
+			initValue 0.0606
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0.0606
+			}
+		scale scale
+			{
+			name GetStringRes(1028,5)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleX xScale
+			{
+			name GetStringRes(1028,6)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleY yScale
+			{
+			name GetStringRes(1028,7)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleZ zScale
+			{
+			name GetStringRes(1028,8)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		jointX jointx
+			{
+			name jointx
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 45 -45 -135 135
+			otherActor gun:2
+			matrixActor NULL
+			center 0.0606 0.00281689 0.0765
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		jointZ jointz
+			{
+			name jointz
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 45 -45 -135 135
+			otherActor gun:2
+			matrixActor NULL
+			center 0.0606 0.00281689 0.0765
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		twistY twisty
+			{
+			name twist
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			otherActor gun:2
+			matrixActor NULL
+			center 0.0606 0.00281689 0.0765
+			startPt 0.051516
+			endPt -0.0093
+			calcWeights
+			}
+		rotateY yrot
+			{
+			name GetStringRes(1028,10)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -360000
+			max 360000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateZ zrot
+			{
+			name GetStringRes(1028,11)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -360000
+			max 360000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  -30
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateX xrot
+			{
+			name GetStringRes(1028,9)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -360000
+			max 360000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		xOffsetB xTranB
+			{
+			name GetStringRes(1028,33)
+			initValue -0.0606
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue -0.0606
+			}
+		yOffsetB yTranB
+			{
+			name GetStringRes(1028,34)
+			initValue -0.00281689
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue -0.00281689
+			}
+		zOffsetB zTranB
+			{
+			name GetStringRes(1028,35)
+			initValue -0.0765
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue -0.0765
+			}
+		translateX xtran
+			{
+			name GetStringRes(1028,12)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateY ytran
+			{
+			name GetStringRes(1028,13)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateZ ztran
+			{
+			name GetStringRes(1028,14)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		}
+	endPoint 0.0606557 0.0026681 0.0765
+	origin 0.0606 0.00281689 0.0765
+	orientation 0 0 0
+	displayOrigin		0
+	displayMode USEPARENT
+	customMaterial	0
+	locked 0
+	}
+
+actor lCanister2:2
+	{
+	name    lCanister2
+	on
+	bend 0
+	dynamicsLock		0
+	hidden		0
+	addToMenu	1
+	castsShadow		1
+	includeInDepthCue		1
+	parent lPin2:2
+	channels
+		{
+		taperY taper
+			{
+			name GetStringRes(1028,1)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.04
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		smoothScaleY lPin2_smooY
+			{
+			name lPin2_scaleY
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			smoothZones 0.023233 0.025232 99 100
+			otherActor lPin2:2
+			flipped
+			calcWeights
+			}
+		zOffsetA zOffset
+			{
+			name GetStringRes(1028,38)
+			initValue 0.0765
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0.0765
+			}
+		yOffsetA yOffset
+			{
+			name GetStringRes(1028,37)
+			initValue 0.0026681
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0.0026681
+			}
+		xOffsetA xOffset
+			{
+			name GetStringRes(1028,36)
+			initValue 0.0606557
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0.0606557
+			}
+		scale scale
+			{
+			name GetStringRes(1028,5)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleX xScale
+			{
+			name GetStringRes(1028,6)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleY yScale
+			{
+			name GetStringRes(1028,7)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleZ zScale
+			{
+			name GetStringRes(1028,8)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		jointX jointx
+			{
+			name jointx
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 235 135 45 315
+			otherActor lPin2:2
+			matrixActor NULL
+			center 0.0606557 0.0026681 0.0765
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		jointZ jointz
+			{
+			name jointz
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 235 135 45 315
+			otherActor lPin2:2
+			matrixActor NULL
+			center 0.0606557 0.0026681 0.0765
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		twistY twisty
+			{
+			name twist
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			otherActor lPin2:2
+			matrixActor NULL
+			center 0.0606557 0.0026681 0.0765
+			startPt -0.0093
+			endPt 0.063751
+			calcWeights
+			}
+		rotateY yrot
+			{
+			name GetStringRes(1028,10)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -360000
+			max 360000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateZ zrot
+			{
+			name GetStringRes(1028,11)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -360000
+			max 360000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateX xrot
+			{
+			name GetStringRes(1028,9)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -360000
+			max 360000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		xOffsetB xTranB
+			{
+			name GetStringRes(1028,33)
+			initValue -0.0606557
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue -0.0606557
+			}
+		yOffsetB yTranB
+			{
+			name GetStringRes(1028,34)
+			initValue -0.0026681
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue -0.0026681
+			}
+		zOffsetB zTranB
+			{
+			name GetStringRes(1028,35)
+			initValue -0.0765
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue -0.0765
+			}
+		translateX xtran
+			{
+			name GetStringRes(1028,12)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateY ytran
+			{
+			name GetStringRes(1028,13)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateZ ztran
+			{
+			name GetStringRes(1028,14)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		}
+	endPoint 0.0606 0.063751 0.0765
+	origin 0.0606557 0.0026681 0.0765
+	orientation 0 0 0
+	displayOrigin		0
+	displayMode USEPARENT
+	customMaterial	0
+	locked 0
+	}
+
+actor lPin3:2
+	{
+	name    lPin3
+	on
+	bend 0
+	dynamicsLock		0
+	hidden		0
+	addToMenu	1
+	castsShadow		1
+	includeInDepthCue		1
+	parent gun:2
+	channels
+		{
+		twistY lCanister3_twisty
+			{
+			name lCanister3_twisty
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			otherActor lCanister3:2
+			matrixActor NULL
+			center 0.0621469 0.0085407 0.1341
+			startPt -0.0036
+			endPt 0.069451
+			flipped
+			calcWeights
+			}
+		jointZ lCanister3_jointz
+			{
+			name lCanister3_jointz
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 235 135 45 315
+			otherActor lCanister3:2
+			matrixActor NULL
+			center 0.0621469 0.0085407 0.1341
+			flipped
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		jointX lCanister3_jointx
+			{
+			name lCanister3_jointx
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 235 135 45 315
+			otherActor lCanister3:2
+			matrixActor NULL
+			center 0.0621469 0.0085407 0.1341
+			flipped
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		taperY taper
+			{
+			name GetStringRes(1028,1)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.04
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		smoothScaleY lCanister3_smooY
+			{
+			name lCanister3_scaleY
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			smoothZones -100 -99 0.028933 0.030932
+			otherActor lCanister3:2
+			calcWeights
+			}
+		smoothScaleZ gun_smooZ
+			{
+			name gun_scaleZ
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			smoothZones 0.122504 0.128311 99 100
+			otherActor gun:2
+			flipped
+			calcWeights
+			}
+		zOffsetA zOffset
+			{
+			name GetStringRes(1028,38)
+			initValue 0.1341
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0.1341
+			}
+		yOffsetA yOffset
+			{
+			name GetStringRes(1028,37)
+			initValue 0.00767092
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0.00767092
+			}
+		xOffsetA xOffset
+			{
+			name GetStringRes(1028,36)
+			initValue 0.0620895
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0.0620895
+			}
+		scale scale
+			{
+			name GetStringRes(1028,5)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleX xScale
+			{
+			name GetStringRes(1028,6)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleY yScale
+			{
+			name GetStringRes(1028,7)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleZ zScale
+			{
+			name GetStringRes(1028,8)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		jointX jointx
+			{
+			name jointx
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 45 -45 -135 135
+			otherActor gun:2
+			matrixActor NULL
+			center 0.0620895 0.00767092 0.1341
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		jointZ jointz
+			{
+			name jointz
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 45 -45 -135 135
+			otherActor gun:2
+			matrixActor NULL
+			center 0.0620895 0.00767092 0.1341
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		twistY twisty
+			{
+			name twist
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			otherActor gun:2
+			matrixActor NULL
+			center 0.0620895 0.00767092 0.1341
+			startPt 0.057216
+			endPt -0.0036
+			calcWeights
+			}
+		rotateY yrot
+			{
+			name GetStringRes(1028,10)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -360000
+			max 360000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateZ zrot
+			{
+			name GetStringRes(1028,11)
+			initValue 0.697527
+			hidden 0
+			forceLimits 0
+			min -360000
+			max 360000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  -30
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateX xrot
+			{
+			name GetStringRes(1028,9)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -360000
+			max 360000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		xOffsetB xTranB
+			{
+			name GetStringRes(1028,33)
+			initValue -0.0620895
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue -0.0620895
+			}
+		yOffsetB yTranB
+			{
+			name GetStringRes(1028,34)
+			initValue -0.00767092
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue -0.00767092
+			}
+		zOffsetB zTranB
+			{
+			name GetStringRes(1028,35)
+			initValue -0.1341
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue -0.1341
+			}
+		translateX xtran
+			{
+			name GetStringRes(1028,12)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateY ytran
+			{
+			name GetStringRes(1028,13)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateZ ztran
+			{
+			name GetStringRes(1028,14)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		}
+	endPoint 0.0624 -0.0036 0.1341
+	origin 0.0620895 0.00767092 0.1341
+	orientation 0 0 0
+	displayOrigin		0
+	displayMode USEPARENT
+	customMaterial	0
+	locked 0
+	}
+
+actor lCanister3:2
+	{
+	name    lCanister3
+	on
+	bend 0
+	dynamicsLock		0
+	hidden		0
+	addToMenu	1
+	castsShadow		1
+	includeInDepthCue		1
+	parent lPin3:2
+	channels
+		{
+		taperY taper
+			{
+			name GetStringRes(1028,1)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.04
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		smoothScaleY lPin3_smooY
+			{
+			name lPin3_scaleY
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			smoothZones 0.028933 0.030932 99 100
+			otherActor lPin3:2
+			flipped
+			calcWeights
+			}
+		zOffsetA zOffset
+			{
+			name GetStringRes(1028,38)
+			initValue 0.1341
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0.1341
+			}
+		yOffsetA yOffset
+			{
+			name GetStringRes(1028,37)
+			initValue 0.0085407
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0.0085407
+			}
+		xOffsetA xOffset
+			{
+			name GetStringRes(1028,36)
+			initValue 0.0621469
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0.0621469
+			}
+		scale scale
+			{
+			name GetStringRes(1028,5)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleX xScale
+			{
+			name GetStringRes(1028,6)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleY yScale
+			{
+			name GetStringRes(1028,7)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleZ zScale
+			{
+			name GetStringRes(1028,8)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		jointX jointx
+			{
+			name jointx
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 235 135 45 315
+			otherActor lPin3:2
+			matrixActor NULL
+			center 0.0621469 0.0085407 0.1341
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		jointZ jointz
+			{
+			name jointz
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 235 135 45 315
+			otherActor lPin3:2
+			matrixActor NULL
+			center 0.0621469 0.0085407 0.1341
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		twistY twisty
+			{
+			name twist
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			otherActor lPin3:2
+			matrixActor NULL
+			center 0.0621469 0.0085407 0.1341
+			startPt -0.0036
+			endPt 0.069451
+			calcWeights
+			}
+		rotateY yrot
+			{
+			name GetStringRes(1028,10)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -360000
+			max 360000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateZ zrot
+			{
+			name GetStringRes(1028,11)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -360000
+			max 360000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateX xrot
+			{
+			name GetStringRes(1028,9)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -360000
+			max 360000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		xOffsetB xTranB
+			{
+			name GetStringRes(1028,33)
+			initValue -0.0621469
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue -0.0621469
+			}
+		yOffsetB yTranB
+			{
+			name GetStringRes(1028,34)
+			initValue -0.0085407
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue -0.0085407
+			}
+		zOffsetB zTranB
+			{
+			name GetStringRes(1028,35)
+			initValue -0.1341
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue -0.1341
+			}
+		translateX xtran
+			{
+			name GetStringRes(1028,12)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateY ytran
+			{
+			name GetStringRes(1028,13)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateZ ztran
+			{
+			name GetStringRes(1028,14)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		}
+	endPoint 0.0624 0.069451 0.1341
+	origin 0.0621469 0.0085407 0.1341
+	orientation 0 0 0
+	displayOrigin		0
+	displayMode USEPARENT
+	customMaterial	0
+	locked 0
+	}
+
+actor rPin1:2
+	{
+	name    rPin1
+	on
+	bend 0
+	dynamicsLock		0
+	hidden		0
+	addToMenu	1
+	castsShadow		1
+	includeInDepthCue		1
+	parent gun:2
+	channels
+		{
+		twistY rCanister1_twisty
+			{
+			name rCanister1_twisty
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			otherActor rCanister1:2
+			matrixActor NULL
+			center -0.0534557 0.00615348 0.0171
+			startPt -0.0057
+			endPt 0.067351
+			flipped
+			calcWeights
+			}
+		jointZ rCanister1_jointz
+			{
+			name rCanister1_jointz
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 235 135 45 315
+			otherActor rCanister1:2
+			matrixActor NULL
+			center -0.0534557 0.00615348 0.0171
+			flipped
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		jointX rCanister1_jointx
+			{
+			name rCanister1_jointx
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 235 135 45 315
+			otherActor rCanister1:2
+			matrixActor NULL
+			center -0.0534557 0.00615348 0.0171
+			flipped
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		taperY taper
+			{
+			name GetStringRes(1028,1)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.04
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		smoothScaleY rCanister1_smooY
+			{
+			name rCanister1_scaleY
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			smoothZones -100 -99 0.026833 0.028832
+			otherActor rCanister1:2
+			calcWeights
+			}
+		smoothScaleZ gun_smooZ
+			{
+			name gun_scaleZ
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			smoothZones -100 -99 0.050272 0.083543
+			otherActor gun:2
+			flipped
+			calcWeights
+			}
+		zOffsetA zOffset
+			{
+			name GetStringRes(1028,38)
+			initValue 0.0171
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0.0171
+			}
+		yOffsetA yOffset
+			{
+			name GetStringRes(1028,37)
+			initValue 0.00606189
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0.00606189
+			}
+		xOffsetA xOffset
+			{
+			name GetStringRes(1028,36)
+			initValue -0.0537105
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue -0.0537105
+			}
+		scale scale
+			{
+			name GetStringRes(1028,5)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleX xScale
+			{
+			name GetStringRes(1028,6)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleY yScale
+			{
+			name GetStringRes(1028,7)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleZ zScale
+			{
+			name GetStringRes(1028,8)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		jointX jointx
+			{
+			name jointx
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 45 -45 -135 135
+			otherActor gun:2
+			matrixActor NULL
+			center -0.0537105 0.00606189 0.0171
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		jointZ jointz
+			{
+			name jointz
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 45 -45 -135 135
+			otherActor gun:2
+			matrixActor NULL
+			center -0.0537105 0.00606189 0.0171
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		twistY twisty
+			{
+			name twist
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			otherActor gun:2
+			matrixActor NULL
+			center -0.0537105 0.00606189 0.0171
+			startPt 0.055116
+			endPt -0.0057
+			calcWeights
+			}
+		rotateY yrot
+			{
+			name GetStringRes(1028,10)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -360000
+			max 360000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0.273728
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateZ zrot
+			{
+			name GetStringRes(1028,11)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -360000
+			max 360000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  30
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateX xrot
+			{
+			name GetStringRes(1028,9)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -360000
+			max 360000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  -0.0890858
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		xOffsetB xTranB
+			{
+			name GetStringRes(1028,33)
+			initValue 0.0537105
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0.0537105
+			}
+		yOffsetB yTranB
+			{
+			name GetStringRes(1028,34)
+			initValue -0.00606189
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue -0.00606189
+			}
+		zOffsetB zTranB
+			{
+			name GetStringRes(1028,35)
+			initValue -0.0171
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue -0.0171
+			}
+		translateX xtran
+			{
+			name GetStringRes(1028,12)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateY ytran
+			{
+			name GetStringRes(1028,13)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateZ ztran
+			{
+			name GetStringRes(1028,14)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		}
+	endPoint -0.0534557 0.00615348 0.0171
+	origin -0.0537105 0.00606189 0.0171
+	orientation 0 0 0
+	displayOrigin		0
+	displayMode USEPARENT
+	customMaterial	0
+	locked 0
+	}
+
+actor rCanister1:2
+	{
+	name    rCanister1
+	on
+	bend 0
+	dynamicsLock		0
+	hidden		0
+	addToMenu	1
+	castsShadow		1
+	includeInDepthCue		1
+	parent rPin1:2
+	channels
+		{
+		taperY taper
+			{
+			name GetStringRes(1028,1)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.04
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		smoothScaleY rPin1_smooY
+			{
+			name rPin1_scaleY
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			smoothZones 0.026833 0.028832 99 100
+			otherActor rPin1:2
+			flipped
+			calcWeights
+			}
+		zOffsetA zOffset
+			{
+			name GetStringRes(1028,38)
+			initValue 0.0171
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0.0171
+			}
+		yOffsetA yOffset
+			{
+			name GetStringRes(1028,37)
+			initValue 0.00615348
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0.00615348
+			}
+		xOffsetA xOffset
+			{
+			name GetStringRes(1028,36)
+			initValue -0.0534557
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue -0.0534557
+			}
+		scale scale
+			{
+			name GetStringRes(1028,5)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleX xScale
+			{
+			name GetStringRes(1028,6)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleY yScale
+			{
+			name GetStringRes(1028,7)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleZ zScale
+			{
+			name GetStringRes(1028,8)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		jointX jointx
+			{
+			name jointx
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 235 135 45 315
+			otherActor rPin1:2
+			matrixActor NULL
+			center -0.0534557 0.00615348 0.0171
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		jointZ jointz
+			{
+			name jointz
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 235 135 45 315
+			otherActor rPin1:2
+			matrixActor NULL
+			center -0.0534557 0.00615348 0.0171
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		twistY twisty
+			{
+			name twist
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			otherActor rPin1:2
+			matrixActor NULL
+			center -0.0534557 0.00615348 0.0171
+			startPt -0.0057
+			endPt 0.067351
+			calcWeights
+			}
+		rotateY yrot
+			{
+			name GetStringRes(1028,10)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -360000
+			max 360000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateZ zrot
+			{
+			name GetStringRes(1028,11)
+			initValue 0.0104503
+			hidden 0
+			forceLimits 0
+			min -360000
+			max 360000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0.0104503
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateX xrot
+			{
+			name GetStringRes(1028,9)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -360000
+			max 360000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		xOffsetB xTranB
+			{
+			name GetStringRes(1028,33)
+			initValue 0.0534557
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0.0534557
+			}
+		yOffsetB yTranB
+			{
+			name GetStringRes(1028,34)
+			initValue -0.00615348
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue -0.00615348
+			}
+		zOffsetB zTranB
+			{
+			name GetStringRes(1028,35)
+			initValue -0.0171
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue -0.0171
+			}
+		translateX xtran
+			{
+			name GetStringRes(1028,12)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateY ytran
+			{
+			name GetStringRes(1028,13)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateZ ztran
+			{
+			name GetStringRes(1028,14)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		}
+	endPoint -0.0534 0.067351 0.0171
+	origin -0.0534557 0.00615348 0.0171
+	orientation 0 0 0
+	displayOrigin		0
+	displayMode USEPARENT
+	customMaterial	0
+	locked 0
+	}
+
+actor rPin2:2
+	{
+	name    rPin2
+	on
+	bend 0
+	dynamicsLock		0
+	hidden		0
+	addToMenu	1
+	castsShadow		1
+	includeInDepthCue		1
+	parent gun:2
+	channels
+		{
+		twistY rCanister2_twisty
+			{
+			name rCanister2_twisty
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			otherActor rCanister2:2
+			matrixActor NULL
+			center -0.0609105 0.00280829 0.0765
+			startPt -0.0093
+			endPt 0.063751
+			flipped
+			calcWeights
+			}
+		jointZ rCanister2_jointz
+			{
+			name rCanister2_jointz
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 235 135 45 315
+			otherActor rCanister2:2
+			matrixActor NULL
+			center -0.0609105 0.00280829 0.0765
+			flipped
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		jointX rCanister2_jointx
+			{
+			name rCanister2_jointx
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 235 135 45 315
+			otherActor rCanister2:2
+			matrixActor NULL
+			center -0.0609105 0.00280829 0.0765
+			flipped
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		taperY taper
+			{
+			name GetStringRes(1028,1)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.04
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		smoothScaleY rCanister2_smooY
+			{
+			name rCanister2_scaleY
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			smoothZones -100 -99 0.023233 0.025232
+			otherActor rCanister2:2
+			calcWeights
+			}
+		smoothScaleZ gun_smooZ
+			{
+			name gun_scaleZ
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			smoothZones -100 -99 0.089892 0.103323
+			otherActor gun:2
+			flipped
+			calcWeights
+			}
+		zOffsetA zOffset
+			{
+			name GetStringRes(1028,38)
+			initValue 0.0765
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0.0765
+			}
+		yOffsetA yOffset
+			{
+			name GetStringRes(1028,37)
+			initValue 0.00277236
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0.00277236
+			}
+		xOffsetA xOffset
+			{
+			name GetStringRes(1028,36)
+			initValue -0.0609661
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue -0.0609661
+			}
+		scale scale
+			{
+			name GetStringRes(1028,5)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleX xScale
+			{
+			name GetStringRes(1028,6)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleY yScale
+			{
+			name GetStringRes(1028,7)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleZ zScale
+			{
+			name GetStringRes(1028,8)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		jointX jointx
+			{
+			name jointx
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 45 -45 -135 135
+			otherActor gun:2
+			matrixActor NULL
+			center -0.0609661 0.00277236 0.0765
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		jointZ jointz
+			{
+			name jointz
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 45 -45 -135 135
+			otherActor gun:2
+			matrixActor NULL
+			center -0.0609661 0.00277236 0.0765
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		twistY twisty
+			{
+			name twist
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			otherActor gun:2
+			matrixActor NULL
+			center -0.0609661 0.00277236 0.0765
+			startPt 0.051516
+			endPt -0.0093
+			calcWeights
+			}
+		rotateY yrot
+			{
+			name GetStringRes(1028,10)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -360000
+			max 360000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateZ zrot
+			{
+			name GetStringRes(1028,11)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -360000
+			max 360000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  30
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateX xrot
+			{
+			name GetStringRes(1028,9)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -360000
+			max 360000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		xOffsetB xTranB
+			{
+			name GetStringRes(1028,33)
+			initValue 0.0609661
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0.0609661
+			}
+		yOffsetB yTranB
+			{
+			name GetStringRes(1028,34)
+			initValue -0.00277236
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue -0.00277236
+			}
+		zOffsetB zTranB
+			{
+			name GetStringRes(1028,35)
+			initValue -0.0765
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue -0.0765
+			}
+		translateX xtran
+			{
+			name GetStringRes(1028,12)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateY ytran
+			{
+			name GetStringRes(1028,13)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateZ ztran
+			{
+			name GetStringRes(1028,14)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		}
+	endPoint -0.0606 -0.0093 0.0765
+	origin -0.0609661 0.00277236 0.0765
+	orientation 0 0 0
+	displayOrigin		0
+	displayMode USEPARENT
+	customMaterial	0
+	locked 0
+	}
+
+actor rCanister2:2
+	{
+	name    rCanister2
+	on
+	bend 0
+	dynamicsLock		0
+	hidden		0
+	addToMenu	1
+	castsShadow		1
+	includeInDepthCue		1
+	parent rPin2:2
+	channels
+		{
+		taperY taper
+			{
+			name GetStringRes(1028,1)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.04
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		smoothScaleY rPin2_smooY
+			{
+			name rPin2_scaleY
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			smoothZones 0.023233 0.025232 99 100
+			otherActor rPin2:2
+			flipped
+			calcWeights
+			}
+		zOffsetA zOffset
+			{
+			name GetStringRes(1028,38)
+			initValue 0.0765
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0.0765
+			}
+		yOffsetA yOffset
+			{
+			name GetStringRes(1028,37)
+			initValue 0.00280829
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0.00280829
+			}
+		xOffsetA xOffset
+			{
+			name GetStringRes(1028,36)
+			initValue -0.0609105
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue -0.0609105
+			}
+		scale scale
+			{
+			name GetStringRes(1028,5)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleX xScale
+			{
+			name GetStringRes(1028,6)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleY yScale
+			{
+			name GetStringRes(1028,7)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleZ zScale
+			{
+			name GetStringRes(1028,8)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		jointX jointx
+			{
+			name jointx
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 235 135 45 315
+			otherActor rPin2:2
+			matrixActor NULL
+			center -0.0609105 0.00280829 0.0765
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		jointZ jointz
+			{
+			name jointz
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 235 135 45 315
+			otherActor rPin2:2
+			matrixActor NULL
+			center -0.0609105 0.00280829 0.0765
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		twistY twisty
+			{
+			name twist
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			otherActor rPin2:2
+			matrixActor NULL
+			center -0.0609105 0.00280829 0.0765
+			startPt -0.0093
+			endPt 0.063751
+			calcWeights
+			}
+		rotateY yrot
+			{
+			name GetStringRes(1028,10)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -360000
+			max 360000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateZ zrot
+			{
+			name GetStringRes(1028,11)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -360000
+			max 360000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateX xrot
+			{
+			name GetStringRes(1028,9)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -360000
+			max 360000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		xOffsetB xTranB
+			{
+			name GetStringRes(1028,33)
+			initValue 0.0609105
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0.0609105
+			}
+		yOffsetB yTranB
+			{
+			name GetStringRes(1028,34)
+			initValue -0.00280829
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue -0.00280829
+			}
+		zOffsetB zTranB
+			{
+			name GetStringRes(1028,35)
+			initValue -0.0765
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue -0.0765
+			}
+		translateX xtran
+			{
+			name GetStringRes(1028,12)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateY ytran
+			{
+			name GetStringRes(1028,13)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateZ ztran
+			{
+			name GetStringRes(1028,14)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		}
+	endPoint -0.0606 0.063751 0.0765
+	origin -0.0609105 0.00280829 0.0765
+	orientation 0 0 0
+	displayOrigin		0
+	displayMode USEPARENT
+	customMaterial	0
+	locked 0
+	}
+
+actor rPin3:2
+	{
+	name    rPin3
+	on
+	bend 0
+	dynamicsLock		0
+	hidden		0
+	addToMenu	1
+	castsShadow		1
+	includeInDepthCue		1
+	parent gun:2
+	channels
+		{
+		twistY rCanister3_twisty
+			{
+			name rCanister3_twisty
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			otherActor rCanister3:2
+			matrixActor NULL
+			center -0.0622565 0.00831514 0.1341
+			startPt -0.0036
+			endPt 0.069451
+			flipped
+			calcWeights
+			}
+		jointZ rCanister3_jointz
+			{
+			name rCanister3_jointz
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 235 135 45 315
+			otherActor rCanister3:2
+			matrixActor NULL
+			center -0.0622565 0.00831514 0.1341
+			flipped
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		jointX rCanister3_jointx
+			{
+			name rCanister3_jointx
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 235 135 45 315
+			otherActor rCanister3:2
+			matrixActor NULL
+			center -0.0622565 0.00831514 0.1341
+			flipped
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		taperY taper
+			{
+			name GetStringRes(1028,1)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.04
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		smoothScaleY rCanister3_smooY
+			{
+			name rCanister3_scaleY
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			smoothZones -100 -99 0.028933 0.030932
+			otherActor rCanister3:2
+			calcWeights
+			}
+		smoothScaleZ gun_smooZ
+			{
+			name gun_scaleZ
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			smoothZones 0.122504 0.128311 99 100
+			otherActor gun:2
+			flipped
+			calcWeights
+			}
+		zOffsetA zOffset
+			{
+			name GetStringRes(1028,38)
+			initValue 0.1341
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0.1341
+			}
+		yOffsetA yOffset
+			{
+			name GetStringRes(1028,37)
+			initValue 0.00857254
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0.00857254
+			}
+		xOffsetA xOffset
+			{
+			name GetStringRes(1028,36)
+			initValue -0.0627105
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue -0.0627105
+			}
+		scale scale
+			{
+			name GetStringRes(1028,5)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleX xScale
+			{
+			name GetStringRes(1028,6)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleY yScale
+			{
+			name GetStringRes(1028,7)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleZ zScale
+			{
+			name GetStringRes(1028,8)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		jointX jointx
+			{
+			name jointx
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 45 -45 -135 135
+			otherActor gun:2
+			matrixActor NULL
+			center -0.0627105 0.00857254 0.1341
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		jointZ jointz
+			{
+			name jointz
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 45 -45 -135 135
+			otherActor gun:2
+			matrixActor NULL
+			center -0.0627105 0.00857254 0.1341
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		twistY twisty
+			{
+			name twist
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			otherActor gun:2
+			matrixActor NULL
+			center -0.0627105 0.00857254 0.1341
+			startPt 0.057216
+			endPt -0.0036
+			calcWeights
+			}
+		rotateY yrot
+			{
+			name GetStringRes(1028,10)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -360000
+			max 360000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateZ zrot
+			{
+			name GetStringRes(1028,11)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -360000
+			max 360000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  30
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateX xrot
+			{
+			name GetStringRes(1028,9)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -360000
+			max 360000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		xOffsetB xTranB
+			{
+			name GetStringRes(1028,33)
+			initValue 0.0627105
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0.0627105
+			}
+		yOffsetB yTranB
+			{
+			name GetStringRes(1028,34)
+			initValue -0.00857254
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue -0.00857254
+			}
+		zOffsetB zTranB
+			{
+			name GetStringRes(1028,35)
+			initValue -0.1341
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue -0.1341
+			}
+		translateX xtran
+			{
+			name GetStringRes(1028,12)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateY ytran
+			{
+			name GetStringRes(1028,13)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateZ ztran
+			{
+			name GetStringRes(1028,14)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		}
+	endPoint -0.0624 -0.0036 0.1341
+	origin -0.0627105 0.00857254 0.1341
+	orientation 0 0 0
+	displayOrigin		0
+	displayMode USEPARENT
+	customMaterial	0
+	locked 0
+	}
+
+actor rCanister3:2
+	{
+	name    rCanister3
+	on
+	bend 0
+	dynamicsLock		0
+	hidden		0
+	addToMenu	1
+	castsShadow		1
+	includeInDepthCue		1
+	parent rPin3:2
+	channels
+		{
+		taperY taper
+			{
+			name GetStringRes(1028,1)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.04
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		smoothScaleY rPin3_smooY
+			{
+			name rPin3_scaleY
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			smoothZones 0.028933 0.030932 99 100
+			otherActor rPin3:2
+			flipped
+			calcWeights
+			}
+		zOffsetA zOffset
+			{
+			name GetStringRes(1028,38)
+			initValue 0.1341
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0.1341
+			}
+		yOffsetA yOffset
+			{
+			name GetStringRes(1028,37)
+			initValue 0.00831514
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0.00831514
+			}
+		xOffsetA xOffset
+			{
+			name GetStringRes(1028,36)
+			initValue -0.0622565
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue -0.0622565
+			}
+		scale scale
+			{
+			name GetStringRes(1028,5)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleX xScale
+			{
+			name GetStringRes(1028,6)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleY yScale
+			{
+			name GetStringRes(1028,7)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		scaleZ zScale
+			{
+			name GetStringRes(1028,8)
+			initValue 1
+			hidden 0
+			forceLimits 0
+			min 0.1
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  0
+				k  0  1
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		jointX jointx
+			{
+			name jointx
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 235 135 45 315
+			otherActor rPin3:2
+			matrixActor NULL
+			center -0.0622565 0.00831514 0.1341
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		jointZ jointz
+			{
+			name jointz
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			angles 235 135 45 315
+			otherActor rPin3:2
+			matrixActor NULL
+			center -0.0622565 0.00831514 0.1341
+			doBulge 0
+			jointMult 1
+			calcWeights
+			}
+		twistY twisty
+			{
+			name twist
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			otherActor rPin3:2
+			matrixActor NULL
+			center -0.0622565 0.00831514 0.1341
+			startPt -0.0036
+			endPt 0.069451
+			calcWeights
+			}
+		rotateY yrot
+			{
+			name GetStringRes(1028,10)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -360000
+			max 360000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateZ zrot
+			{
+			name GetStringRes(1028,11)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -360000
+			max 360000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		rotateX xrot
+			{
+			name GetStringRes(1028,9)
+			initValue 0
+			hidden 0
+			forceLimits 0
+			min -360000
+			max 360000
+			trackingScale 1
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		xOffsetB xTranB
+			{
+			name GetStringRes(1028,33)
+			initValue 0.0622565
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue 0.0622565
+			}
+		yOffsetB yTranB
+			{
+			name GetStringRes(1028,34)
+			initValue -0.00831514
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue -0.00831514
+			}
+		zOffsetB zTranB
+			{
+			name GetStringRes(1028,35)
+			initValue -0.1341
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.004
+			keys
+				{
+				static  1
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			staticValue -0.1341
+			}
+		translateX xtran
+			{
+			name GetStringRes(1028,12)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateY ytran
+			{
+			name GetStringRes(1028,13)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		translateZ ztran
+			{
+			name GetStringRes(1028,14)
+			initValue 0
+			hidden 1
+			forceLimits 0
+			min -100000
+			max 100000
+			trackingScale 0.002
+			keys
+				{
+				static  0
+				k  0  0
+				sl  1
+				spl
+				sm
+				}
+			interpStyleLocked 0
+			}
+		}
+	endPoint -0.0624 0.069451 0.1341
+	origin -0.0622565 0.00831514 0.1341
+	orientation 0 0 0
+	displayOrigin		0
+	displayMode USEPARENT
+	customMaterial	0
+	locked 0
+	}
+
+figure 
+	{
+	name    Figure 1
+	root    BODY:2
+	addChild    gun:2 
+			 BODY:2
+	addChild    lPin1:2 
+			 gun:2
+	addChild    lCanister1:2 
+			 lPin1:2
+	addChild    lPin2:2 
+			 gun:2
+	addChild    lCanister2:2 
+			 lPin2:2
+	addChild    lPin3:2 
+			 gun:2
+	addChild    lCanister3:2 
+			 lPin3:2
+	addChild    rPin1:2 
+			 gun:2
+	addChild    rCanister1:2 
+			 rPin1:2
+	addChild    rPin2:2 
+			 gun:2
+	addChild    rCanister2:2 
+			 rPin2:2
+	addChild    rPin3:2 
+			 gun:2
+	addChild    rCanister3:2 
+			 rPin3:2
+	defaultPick gun:2 
+	displayOn 1 
+	weld    lPin1:2  
+			 gun:2
+	weld    lCanister1:2  
+			 lPin1:2
+	weld    lPin2:2  
+			 gun:2
+	weld    lCanister2:2  
+			 lPin2:2
+	weld    lPin3:2  
+			 gun:2
+	weld    lCanister3:2  
+			 lPin3:2
+	weld    rPin1:2  
+			 gun:2
+	weld    rCanister1:2  
+			 rPin1:2
+	weld    rPin2:2  
+			 gun:2
+	weld    rCanister2:2  
+			 rPin2:2
+	weld    rPin3:2  
+			 gun:2
+	weld    rCanister3:2  
+			 rPin3:2
+	allowsBending 1 
+	figureType 1318 
+	origFigureType 1318 
+	canonType 8 
+	conforming 0
+	material outriggerFillet
+		{
+		KdColor 0.74902 0.74902 0.74902 1 
+		KaColor 0 0 0 1 
+		KsColor 1 1 1 1 
+		TextureColor 1 1 1 1 
+		NsExponent 30 
+		tMin 0 
+		tMax 0 
+		tExpo 0.6 
+		bumpStrength 0.0952381 
+		ksIgnoreTexture 0 
+		reflectThruLights 1 
+		reflectThruKd 1 
+		textureMap ":Runtime:Geometries:helixGunHi:helixGunHi.jpg"
+ 				0 0 
+		bumpMap ":Runtime:Geometries:helixGunHi:helixGunHi.bum"
+ 				0 0 
+		reflectionMap ":Runtime:Geometries:helixGunHi:silverReflect4.jpg"
+ 				0 0 
+		transparencyMap NO_MAP
+		ReflectionColor 1 1 1 1 
+		reflectionStrength 1 
+		}
+	material gunOutrigger
+		{
+		KdColor 1 1 1 1 
+		KaColor 0 0 0 1 
+		KsColor 1 1 1 1 
+		TextureColor 1 1 1 1 
+		NsExponent 30 
+		tMin 0 
+		tMax 0 
+		tExpo 0.6 
+		bumpStrength 0.0952381 
+		ksIgnoreTexture 0 
+		reflectThruLights 1 
+		reflectThruKd 1 
+		textureMap ":Runtime:Geometries:helixGunHi:helixGunHi.jpg"
+ 				0 0 
+		bumpMap ":Runtime:Geometries:helixGunHi:helixGunHi.bum"
+ 				0 0 
+		reflectionMap ":Runtime:Geometries:helixGunHi:silverReflect4.jpg"
+ 				0 0 
+		transparencyMap NO_MAP
+		ReflectionColor 1 1 1 1 
+		reflectionStrength 1 
+		}
+	material outriggerIn
+		{
+		KdColor 0.0862745 0 0.882353 1 
+		KaColor 0 0 0 1 
+		KsColor 0.568627 0.580392 1 1 
+		TextureColor 1 1 1 1 
+		NsExponent 30 
+		tMin 0 
+		tMax 0 
+		tExpo 0.6 
+		bumpStrength 0.0952381 
+		ksIgnoreTexture 0 
+		reflectThruLights 1 
+		reflectThruKd 1 
+		textureMap ":Runtime:Geometries:helixGunHi:helixGunHi.jpg"
+ 				0 0 
+		bumpMap ":Runtime:Geometries:helixGunHi:helixGunHi.bum"
+ 				0 0 
+		reflectionMap ":Runtime:Geometries:helixGunHi:silverReflect4.jpg"
+ 				0 0 
+		transparencyMap NO_MAP
+		ReflectionColor 0.160784 0 0.807843 1 
+		reflectionStrength 1 
+		}
+	material gunInside
+		{
+		KdColor 0 0 0 1 
+		KaColor 0 0 0 1 
+		KsColor 0.147845 0.0630655 0.150301 1 
+		TextureColor 1 1 1 1 
+		NsExponent 30 
+		tMin 0 
+		tMax 0 
+		tExpo 0.6 
+		bumpStrength 0.0952381 
+		ksIgnoreTexture 0 
+		reflectThruLights 1 
+		reflectThruKd 1 
+		textureMap ":Runtime:Geometries:helixGunHi:helixGunHi.jpg"
+ 				0 0 
+		bumpMap ":Runtime:Geometries:helixGunHi:helixGunHi.bum"
+ 				0 0 
+		reflectionMap ":Runtime:Geometries:helixGunHi:silverReflect4.jpg"
+ 				0 0 
+		transparencyMap NO_MAP
+		ReflectionColor 0 0 0 1 
+		reflectionStrength 1 
+		}
+	material gunBody
+		{
+		KdColor 1 1 1 1 
+		KaColor 0 0 0 1 
+		KsColor 1 1 1 1 
+		TextureColor 1 1 1 1 
+		NsExponent 30 
+		tMin 0 
+		tMax 0 
+		tExpo 0.6 
+		bumpStrength 0.0952381 
+		ksIgnoreTexture 0 
+		reflectThruLights 1 
+		reflectThruKd 1 
+		textureMap ":Runtime:Geometries:helixGunHi:helixGunHi.jpg"
+ 				0 0 
+		bumpMap ":Runtime:Geometries:helixGunHi:helixGunHi.bum"
+ 				0 0 
+		reflectionMap ":Runtime:Geometries:helixGunHi:silverReflect4.jpg"
+ 				0 0 
+		transparencyMap NO_MAP
+		ReflectionColor 1 1 1 1 
+		reflectionStrength 1 
+		}
+	material gunFillet
+		{
+		KdColor 0.560784 0.560784 0.560784 1 
+		KaColor 0 0 0 1 
+		KsColor 0.145098 0.0627298 0.14902 1 
+		TextureColor 1 1 1 1 
+		NsExponent 30 
+		tMin 0 
+		tMax 0 
+		tExpo 0.6 
+		bumpStrength 0.0952381 
+		ksIgnoreTexture 0 
+		reflectThruLights 1 
+		reflectThruKd 1 
+		textureMap ":Runtime:Geometries:helixGunHi:helixGunHi.jpg"
+ 				0 0 
+		bumpMap ":Runtime:Geometries:helixGunHi:helixGunHi.bum"
+ 				0 0 
+		reflectionMap ":Runtime:Geometries:helixGunHi:silverReflect4.jpg"
+ 				0 0 
+		transparencyMap NO_MAP
+		ReflectionColor 1 1 1 1 
+		reflectionStrength 1 
+		}
+	material gunRudder
+		{
+		KdColor 0.686275 0.686275 0.686275 1 
+		KaColor 0 0 0 1 
+		KsColor 1 1 1 1 
+		TextureColor 1 1 1 1 
+		NsExponent 30 
+		tMin 0 
+		tMax 0 
+		tExpo 0.6 
+		bumpStrength 0.0952381 
+		ksIgnoreTexture 0 
+		reflectThruLights 1 
+		reflectThruKd 1 
+		textureMap ":Runtime:Geometries:helixGunHi:helixGunHi.jpg"
+ 				0 0 
+		bumpMap ":Runtime:Geometries:helixGunHi:helixGunHi.bum"
+ 				0 0 
+		reflectionMap ":Runtime:Geometries:helixGunHi:silverReflect4.jpg"
+ 				0 0 
+		transparencyMap NO_MAP
+		ReflectionColor 1 1 1 1 
+		reflectionStrength 1 
+		}
+	material gunNozzel
+		{
+		KdColor 0 0 0.792157 1 
+		KaColor 0 0 0 1 
+		KsColor 0.513726 0.47451 1 1 
+		TextureColor 1 1 1 1 
+		NsExponent 1 
+		tMin 0 
+		tMax 0 
+		tExpo 0.6 
+		bumpStrength 0.0952381 
+		ksIgnoreTexture 0 
+		reflectThruLights 1 
+		reflectThruKd 1 
+		textureMap ":Runtime:Geometries:helixGunHi:helixGunHi.jpg"
+ 				0 0 
+		bumpMap ":Runtime:Geometries:helixGunHi:helixGunHi.bum"
+ 				0 0 
+		reflectionMap ":Runtime:Geometries:helixGunHi:silverReflect4.jpg"
+ 				0 0 
+		transparencyMap NO_MAP
+		ReflectionColor 0.0392157 0 0.768627 1 
+		reflectionStrength 1 
+		}
+	material birdCatcherFillet
+		{
+		KdColor 0.0235294 0 0.47451 1 
+		KaColor 0 0 0 1 
+		KsColor 0.12549 0.145098 1 1 
+		TextureColor 1 1 1 1 
+		NsExponent 30 
+		tMin 0 
+		tMax 0 
+		tExpo 0.6 
+		bumpStrength 0.0952381 
+		ksIgnoreTexture 0 
+		reflectThruLights 1 
+		reflectThruKd 1 
+		textureMap ":Runtime:Geometries:helixGunHi:helixGunHi.jpg"
+ 				0 0 
+		bumpMap ":Runtime:Geometries:helixGunHi:helixGunHi.bum"
+ 				0 0 
+		reflectionMap ":Runtime:Geometries:helixGunHi:silverReflect4.jpg"
+ 				0 0 
+		transparencyMap NO_MAP
+		ReflectionColor 0 0 0.47451 1 
+		reflectionStrength 1 
+		}
+	material birdCatcher
+		{
+		KdColor 0.87451 0.87451 0.87451 1 
+		KaColor 0 0 0 1 
+		KsColor 0.811765 0.811765 0.811765 1 
+		TextureColor 1 1 1 1 
+		NsExponent 30 
+		tMin 0 
+		tMax 0 
+		tExpo 0.6 
+		bumpStrength 0.0952381 
+		ksIgnoreTexture 0 
+		reflectThruLights 1 
+		reflectThruKd 1 
+		textureMap ":Runtime:Geometries:helixGunHi:helixGunHi.jpg"
+ 				0 0 
+		bumpMap ":Runtime:Geometries:helixGunHi:helixGunHi.bum"
+ 				0 0 
+		reflectionMap ":Runtime:Geometries:helixGunHi:silverReflect4.jpg"
+ 				0 0 
+		transparencyMap NO_MAP
+		ReflectionColor 0.87451 0.87451 0.87451 1 
+		reflectionStrength 1 
+		}
+	material birdCatcherIn
+		{
+		KdColor 0.160784 0 0.643137 1 
+		KaColor 0 0 0 1 
+		KsColor 0.721569 0.701961 1 1 
+		TextureColor 1 1 1 1 
+		NsExponent 30 
+		tMin 0 
+		tMax 0 
+		tExpo 0.6 
+		bumpStrength 0.0952381 
+		ksIgnoreTexture 0 
+		reflectThruLights 1 
+		reflectThruKd 1 
+		textureMap ":Runtime:Geometries:helixGunHi:helixGunHi.jpg"
+ 				0 0 
+		bumpMap ":Runtime:Geometries:helixGunHi:helixGunHi.bum"
+ 				0 0 
+		reflectionMap ":Runtime:Geometries:helixGunHi:silverReflect4.jpg"
+ 				0 0 
+		transparencyMap NO_MAP
+		ReflectionColor 0.117647 0.168627 0.615686 1 
+		reflectionStrength 1 
+		}
+	material grip
+		{
+		KdColor 0.560784 0.560784 0.560784 1 
+		KaColor 0 0 0 1 
+		KsColor 0.14789 0.0631113 0.150301 1 
+		TextureColor 1 1 1 1 
+		NsExponent 30 
+		tMin 0 
+		tMax 0 
+		tExpo 0.6 
+		bumpStrength 0.0952381 
+		ksIgnoreTexture 0 
+		reflectThruLights 1 
+		reflectThruKd 1 
+		textureMap ":Runtime:Geometries:helixGunHi:helixGunHi.jpg"
+ 				0 0 
+		bumpMap ":Runtime:Geometries:helixGunHi:helixGunHi.bum"
+ 				0 0 
+		reflectionMap ":Runtime:Geometries:helixGunHi:silverReflect4.jpg"
+ 				0 0 
+		transparencyMap NO_MAP
+		ReflectionColor 0.560784 0.560784 0.560784 1 
+		reflectionStrength 1 
+		}
+	material Preview
+		{
+		KdColor 1 0.645182 0.50959 1 
+		KaColor 0 0 0 1 
+		KsColor 0.37499 0.296605 0.274937 1 
+		TextureColor 1 1 1 1 
+		NsExponent 30 
+		tMin 0 
+		tMax 0 
+		tExpo 0.6 
+		bumpStrength 0.0952381 
+		ksIgnoreTexture 0 
+		reflectThruLights 1 
+		reflectThruKd 0 
+		textureMap ":Runtime:Geometries:helixGunHi:helixGunHi.jpg"
+ 				0 0 
+		bumpMap ":Runtime:Geometries:helixGunHi:helixGunHi.bum"
+ 				0 0 
+		reflectionMap ":Runtime:Geometries:helixGunHi:silverReflect4.jpg"
+ 				0 0 
+		transparencyMap NO_MAP
+		ReflectionColor 1 1 1 1 
+		reflectionStrength 1 
+		}
+	material canisterOutAngel
+		{
+		KdColor 1 1 1 1 
+		KaColor 0 0 0 1 
+		KsColor 1 1 1 1 
+		TextureColor 1 1 1 1 
+		NsExponent 30 
+		tMin 0 
+		tMax 0 
+		tExpo 0.6 
+		bumpStrength 0.0952381 
+		ksIgnoreTexture 0 
+		reflectThruLights 1 
+		reflectThruKd 1 
+		textureMap ":Runtime:Geometries:helixGunHi:helixGunHi.jpg"
+ 				0 0 
+		bumpMap ":Runtime:Geometries:helixGunHi:helixGunHi.bum"
+ 				0 0 
+		reflectionMap ":Runtime:Geometries:helixGunHi:silverReflect4.jpg"
+ 				0 0 
+		transparencyMap NO_MAP
+		ReflectionColor 1 1 1 1 
+		reflectionStrength 1 
+		}
+	material canisterInAngel
+		{
+		KdColor 0.498039 0.498039 0.498039 1 
+		KaColor 0 0 0 1 
+		KsColor 0.498039 0.498039 0.498039 1 
+		TextureColor 1 1 1 1 
+		NsExponent 30 
+		tMin 0 
+		tMax 0 
+		tExpo 0.6 
+		bumpStrength 0.0952381 
+		ksIgnoreTexture 0 
+		reflectThruLights 1 
+		reflectThruKd 0 
+		textureMap ":Runtime:Geometries:helixGunHi:helixGunHi.jpg"
+ 				0 0 
+		bumpMap ":Runtime:Geometries:helixGunHi:helixGunHi.bum"
+ 				0 0 
+		reflectionMap ":Runtime:Geometries:helixGunHi:silverReflect4.jpg"
+ 				0 0 
+		transparencyMap NO_MAP
+		ReflectionColor 0.67451 0.67451 0.67451 1 
+		reflectionStrength 1 
+		}
+	material canisterGlow
+		{
+		KdColor 0.0588235 0.0588235 0.0588235 1 
+		KaColor 0.0588235 0.0588235 0.0588235 1 
+		KsColor 0.0588235 0.0588235 0.0588235 1 
+		TextureColor 1 1 1 1 
+		NsExponent 30 
+		tMin 0 
+		tMax 0 
+		tExpo 0.6 
+		bumpStrength 0.0952381 
+		ksIgnoreTexture 0 
+		reflectThruLights 1 
+		reflectThruKd 0 
+		textureMap ":Runtime:Geometries:helixGunHi:helixGunHi.jpg"
+ 				0 0 
+		bumpMap ":Runtime:Geometries:helixGunHi:helixGunHi.bum"
+ 				0 0 
+		reflectionMap ":Runtime:Geometries:helixGunHi:silverReflect4.jpg"
+ 				0 0 
+		transparencyMap NO_MAP
+		ReflectionColor 0.0588235 0.0588235 0.0588235 1 
+		reflectionStrength 1 
+		}
+	presetMaterial outriggerFillet
+		{
+		KdColor 0.996033 0.373638 0.508896 1 
+		KaColor 0 0 0 1 
+		KsColor 0.147911 0.0631306 0.15031 1 
+		TextureColor 1 1 1 1 
+		NsExponent 30 
+		tMin 0 
+		tMax 0 
+		tExpo 0.6 
+		bumpStrength 1 
+		ksIgnoreTexture 0 
+		reflectThruLights 1 
+		reflectThruKd 0 
+		textureMap NO_MAP
+		bumpMap NO_MAP
+		reflectionMap NO_MAP
+		transparencyMap NO_MAP
+		ReflectionColor 1 1 1 1 
+		reflectionStrength 1 
+		}
+	presetMaterial gunOutrigger
+		{
+		KdColor 0.996033 0.373638 0.508896 1 
+		KaColor 0 0 0 1 
+		KsColor 0.147911 0.0631306 0.15031 1 
+		TextureColor 1 1 1 1 
+		NsExponent 30 
+		tMin 0 
+		tMax 0 
+		tExpo 0.6 
+		bumpStrength 1 
+		ksIgnoreTexture 0 
+		reflectThruLights 1 
+		reflectThruKd 0 
+		textureMap NO_MAP
+		bumpMap NO_MAP
+		reflectionMap NO_MAP
+		transparencyMap NO_MAP
+		ReflectionColor 1 1 1 1 
+		reflectionStrength 1 
+		}
+	presetMaterial outriggerIn
+		{
+		KdColor 0.996033 0.373638 0.508896 1 
+		KaColor 0 0 0 1 
+		KsColor 0.147911 0.0631306 0.15031 1 
+		TextureColor 1 1 1 1 
+		NsExponent 30 
+		tMin 0 
+		tMax 0 
+		tExpo 0.6 
+		bumpStrength 1 
+		ksIgnoreTexture 0 
+		reflectThruLights 1 
+		reflectThruKd 0 
+		textureMap NO_MAP
+		bumpMap NO_MAP
+		reflectionMap NO_MAP
+		transparencyMap NO_MAP
+		ReflectionColor 1 1 1 1 
+		reflectionStrength 1 
+		}
+	presetMaterial gunInside
+		{
+		KdColor 0.996033 0.373638 0.508896 1 
+		KaColor 0 0 0 1 
+		KsColor 0.147911 0.0631306 0.15031 1 
+		TextureColor 1 1 1 1 
+		NsExponent 30 
+		tMin 0 
+		tMax 0 
+		tExpo 0.6 
+		bumpStrength 1 
+		ksIgnoreTexture 0 
+		reflectThruLights 1 
+		reflectThruKd 0 
+		textureMap NO_MAP
+		bumpMap NO_MAP
+		reflectionMap NO_MAP
+		transparencyMap NO_MAP
+		ReflectionColor 1 1 1 1 
+		reflectionStrength 1 
+		}
+	presetMaterial gunBody
+		{
+		KdColor 0.996033 0.373638 0.508896 1 
+		KaColor 0 0 0 1 
+		KsColor 0.147911 0.0631306 0.15031 1 
+		TextureColor 1 1 1 1 
+		NsExponent 30 
+		tMin 0 
+		tMax 0 
+		tExpo 0.6 
+		bumpStrength 1 
+		ksIgnoreTexture 0 
+		reflectThruLights 1 
+		reflectThruKd 0 
+		textureMap NO_MAP
+		bumpMap NO_MAP
+		reflectionMap NO_MAP
+		transparencyMap NO_MAP
+		ReflectionColor 1 1 1 1 
+		reflectionStrength 1 
+		}
+	presetMaterial gunFillet
+		{
+		KdColor 0.996033 0.373638 0.508896 1 
+		KaColor 0 0 0 1 
+		KsColor 0.147911 0.0631306 0.15031 1 
+		TextureColor 1 1 1 1 
+		NsExponent 30 
+		tMin 0 
+		tMax 0 
+		tExpo 0.6 
+		bumpStrength 1 
+		ksIgnoreTexture 0 
+		reflectThruLights 1 
+		reflectThruKd 0 
+		textureMap NO_MAP
+		bumpMap NO_MAP
+		reflectionMap NO_MAP
+		transparencyMap NO_MAP
+		ReflectionColor 1 1 1 1 
+		reflectionStrength 1 
+		}
+	presetMaterial gunRudder
+		{
+		KdColor 0.996033 0.373638 0.508896 1 
+		KaColor 0 0 0 1 
+		KsColor 0.147911 0.0631306 0.15031 1 
+		TextureColor 1 1 1 1 
+		NsExponent 30 
+		tMin 0 
+		tMax 0 
+		tExpo 0.6 
+		bumpStrength 1 
+		ksIgnoreTexture 0 
+		reflectThruLights 1 
+		reflectThruKd 0 
+		textureMap NO_MAP
+		bumpMap NO_MAP
+		reflectionMap NO_MAP
+		transparencyMap NO_MAP
+		ReflectionColor 1 1 1 1 
+		reflectionStrength 1 
+		}
+	presetMaterial gunNozzel
+		{
+		KdColor 0.996033 0.373638 0.508896 1 
+		KaColor 0 0 0 1 
+		KsColor 0.147911 0.0631306 0.15031 1 
+		TextureColor 1 1 1 1 
+		NsExponent 30 
+		tMin 0 
+		tMax 0 
+		tExpo 0.6 
+		bumpStrength 1 
+		ksIgnoreTexture 0 
+		reflectThruLights 1 
+		reflectThruKd 0 
+		textureMap NO_MAP
+		bumpMap NO_MAP
+		reflectionMap NO_MAP
+		transparencyMap NO_MAP
+		ReflectionColor 1 1 1 1 
+		reflectionStrength 1 
+		}
+	presetMaterial birdCatcherFillet
+		{
+		KdColor 0.996033 0.373638 0.508896 1 
+		KaColor 0 0 0 1 
+		KsColor 0.147911 0.0631306 0.15031 1 
+		TextureColor 1 1 1 1 
+		NsExponent 30 
+		tMin 0 
+		tMax 0 
+		tExpo 0.6 
+		bumpStrength 1 
+		ksIgnoreTexture 0 
+		reflectThruLights 1 
+		reflectThruKd 0 
+		textureMap NO_MAP
+		bumpMap NO_MAP
+		reflectionMap NO_MAP
+		transparencyMap NO_MAP
+		ReflectionColor 1 1 1 1 
+		reflectionStrength 1 
+		}
+	presetMaterial birdCatcher
+		{
+		KdColor 0.996033 0.373638 0.508896 1 
+		KaColor 0 0 0 1 
+		KsColor 0.147911 0.0631306 0.15031 1 
+		TextureColor 1 1 1 1 
+		NsExponent 30 
+		tMin 0 
+		tMax 0 
+		tExpo 0.6 
+		bumpStrength 1 
+		ksIgnoreTexture 0 
+		reflectThruLights 1 
+		reflectThruKd 0 
+		textureMap NO_MAP
+		bumpMap NO_MAP
+		reflectionMap NO_MAP
+		transparencyMap NO_MAP
+		ReflectionColor 1 1 1 1 
+		reflectionStrength 1 
+		}
+	presetMaterial birdCatcherIn
+		{
+		KdColor 0.996033 0.373638 0.508896 1 
+		KaColor 0 0 0 1 
+		KsColor 0.147911 0.0631306 0.15031 1 
+		TextureColor 1 1 1 1 
+		NsExponent 30 
+		tMin 0 
+		tMax 0 
+		tExpo 0.6 
+		bumpStrength 1 
+		ksIgnoreTexture 0 
+		reflectThruLights 1 
+		reflectThruKd 0 
+		textureMap NO_MAP
+		bumpMap NO_MAP
+		reflectionMap NO_MAP
+		transparencyMap NO_MAP
+		ReflectionColor 1 1 1 1 
+		reflectionStrength 1 
+		}
+	presetMaterial grip
+		{
+		KdColor 0.996033 0.373638 0.508896 1 
+		KaColor 0 0 0 1 
+		KsColor 0.147911 0.0631306 0.15031 1 
+		TextureColor 1 1 1 1 
+		NsExponent 30 
+		tMin 0 
+		tMax 0 
+		tExpo 0.6 
+		bumpStrength 1 
+		ksIgnoreTexture 0 
+		reflectThruLights 1 
+		reflectThruKd 0 
+		textureMap NO_MAP
+		bumpMap NO_MAP
+		reflectionMap NO_MAP
+		transparencyMap NO_MAP
+		ReflectionColor 1 1 1 1 
+		reflectionStrength 1 
+		}
+	presetMaterial Preview
+		{
+		KdColor 1 1 1 1 
+		KaColor 0 0 0 1 
+		KsColor 0.4 0.4 0.4 1 
+		TextureColor 1 1 1 1 
+		NsExponent 30 
+		tMin 0 
+		tMax 0 
+		tExpo 0.6 
+		bumpStrength 1 
+		ksIgnoreTexture 0 
+		reflectThruLights 1 
+		reflectThruKd 0 
+		textureMap NO_MAP
+		bumpMap NO_MAP
+		reflectionMap NO_MAP
+		transparencyMap NO_MAP
+		ReflectionColor 1 1 1 1 
+		reflectionStrength 1 
+		}
+	presetMaterial canisterOutAngel
+		{
+		KdColor 0.996033 0.373638 0.508896 1 
+		KaColor 0 0 0 1 
+		KsColor 0.147911 0.0631306 0.15031 1 
+		TextureColor 1 1 1 1 
+		NsExponent 30 
+		tMin 0 
+		tMax 0 
+		tExpo 0.6 
+		bumpStrength 1 
+		ksIgnoreTexture 0 
+		reflectThruLights 1 
+		reflectThruKd 0 
+		textureMap NO_MAP
+		bumpMap NO_MAP
+		reflectionMap NO_MAP
+		transparencyMap NO_MAP
+		ReflectionColor 1 1 1 1 
+		reflectionStrength 1 
+		}
+	presetMaterial canisterInAngel
+		{
+		KdColor 0.996033 0.373638 0.508896 1 
+		KaColor 0 0 0 1 
+		KsColor 0.147911 0.0631306 0.15031 1 
+		TextureColor 1 1 1 1 
+		NsExponent 30 
+		tMin 0 
+		tMax 0 
+		tExpo 0.6 
+		bumpStrength 1 
+		ksIgnoreTexture 0 
+		reflectThruLights 1 
+		reflectThruKd 0 
+		textureMap NO_MAP
+		bumpMap NO_MAP
+		reflectionMap NO_MAP
+		transparencyMap NO_MAP
+		ReflectionColor 1 1 1 1 
+		reflectionStrength 1 
+		}
+	presetMaterial canisterGlow
+		{
+		KdColor 0.996033 0.373638 0.508896 1 
+		KaColor 0 0 0 1 
+		KsColor 0.147911 0.0631306 0.15031 1 
+		TextureColor 1 1 1 1 
+		NsExponent 30 
+		tMin 0 
+		tMax 0 
+		tExpo 0.6 
+		bumpStrength 1 
+		ksIgnoreTexture 0 
+		reflectThruLights 1 
+		reflectThruKd 0 
+		textureMap NO_MAP
+		bumpMap NO_MAP
+		reflectionMap NO_MAP
+		transparencyMap NO_MAP
+		ReflectionColor 1 1 1 1 
+		reflectionStrength 1 
+		}
+	displayMode USEPARENT
+	locked 0
+	}
+
+doc
+	{
+	dimensions 675 601
+	screenPlace 171 60
+	displayMode TEXTURESHADED
+
+	useLimits		0 
+	headGuides		0 
+	horizon		0 
+	vanishingLines	0 
+	hipShoulder		0 
+	groundDisplay 	1 
+	depthCue		0 
+	boxesAlways		0 
+	bgPicOn		0 
+	handLockOn	0 
+	loopInterpolation		0 
+	quatInterpolation		0 
+	doBalance		0 
+	fastTracking		0 
+	groundShadows		1 
+	bendBodies		1 
+	fgColor		0.855482 0.855482 0.855482 
+	bgColor		0 0 0 
+	shadowColor		0.0117189 0.0117189 0.00781262 
+	paperTexture -1
+	addActor UNIVERSE
+	addActor GROUND
+	addLight LIGHT3
+	addLight LIGHT2
+	addLight LIGHT1
+	addCamera MAIN_CAMERA
+	addCamera AUX_CAMERA
+	addCamera POSE_CAMERA
+	addCamera STD_CAMERA
+	addCamera SIDE_CAMERA
+	addCamera RIGHT_CAMERA
+	addCamera TOP_CAMERA
+	addCamera BOTTOM_CAMERA
+	addCamera FRONT_CAMERA
+	addCamera BACK_CAMERA
+	addCamera FACE_CAMERA
+	addCamera LHAND_CAMERA
+	addCamera RHAND_CAMERA
+	addCamera SHADOW_CAM_LITE1
+	addCamera SHADOW_CAM_LITE2
+	addCamera SHADOW_CAM_LITE3
+	rootActor UNIVERSE
+	rightCamera RIGHT_CAMERA
+	leftCamera SIDE_CAMERA
+	posingCamera POSE_CAMERA
+	faceCamera FACE_CAMERA
+	rHandCamera RHAND_CAMERA
+	lHandCamera LHAND_CAMERA
+	dollyCamera STD_CAMERA
+	topCamera TOP_CAMERA
+	frontCamera FRONT_CAMERA
+	mainCamera MAIN_CAMERA
+	auxCamera AUX_CAMERA
+	useCamera MAIN_CAMERA
+	pickActor MAIN_CAMERA
+	}
+
+illustrationParms 
+	{
+	combineGradient 0
+	thresholdGradient 1
+	combineColor 0
+	overBlack 0
+	autoDensity 0
+	normalSegCutOff 255
+	bgStyle 8
+	useUVspace 0
+	autoSpacing 0.000000
+	colorBlend 0.000000
+	liteFactor1 1.000000
+	liteFactor2 1.000000
+	liteFactor3 1.000000
+	fgStrokeParms
+		{
+		lineLength 12
+		density 0.409963
+		minRadius 0.010000
+		maxRadius 0.594529
+		lineRandomness 0.000000
+		strokeHeadLength 0.300000
+		strokeTailLength 0.300000
+		colorRandom 0.000000
+		crossHatch 0.000000
+		opacity 0.377347
+		totalNormCutOff 70
+		colorSegCutOff 60
+		britenessSegCutOff 113
+		britenessLoSegCutOff 0
+		coloredLines 0
+		brushStyle 0
+		}
+	bgStrokeParms
+		{
+		lineLength 20
+		density 0.000000
+		minRadius 0.010000
+		maxRadius 0.400000
+		lineRandomness 0.300000
+		strokeHeadLength 0.200000
+		strokeTailLength 0.200000
+		colorRandom 0.000000
+		crossHatch 0.000000
+		opacity 1.000000
+		totalNormCutOff 70
+		colorSegCutOff 60
+		britenessSegCutOff 160
+		britenessLoSegCutOff 0
+		coloredLines 0
+		brushStyle 1
+		}
+	edgeStrokeParms
+		{
+		lineLength 23
+		density 0.076226
+		minRadius 0.031222
+		maxRadius 0.850243
+		lineRandomness 0.000000
+		strokeHeadLength 0.378571
+		strokeTailLength 0.300000
+		colorRandom 0.000000
+		crossHatch 0.000000
+		opacity 0.279388
+		totalNormCutOff 190
+		colorSegCutOff 204
+		britenessSegCutOff 170
+		britenessLoSegCutOff 0
+		coloredLines 0
+		brushStyle 0
+		}
+	}
+
+renderDefaults 
+	{
+	Kd 1.000000
+	Ks 0.700000
+	Ns 50.000000
+	antialiasing 1
+	textureStrength 1.000000
+	bumpStrength 1.000000
+	useTexture 1
+	useBump 1
+	castShadows 1
+	renderOver bgcolor
+	toNewWindow 0
+	newWinWidth 640
+	newWinHeight 570
+	newWinDPI 72
+	}
+setGeomHandlerOffset 0 0.3487 0
+}
