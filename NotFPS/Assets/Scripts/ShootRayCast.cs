@@ -6,6 +6,7 @@ public class ShootRayCast : MonoBehaviour {
 
     public GameObject fPSController;
     public GameObject canvasObject;
+	public GameObject laserholder;
     public Sprite[] canvasImages;
     private Image image;
     public float maxPowerDistance = 10.0f;
@@ -19,15 +20,18 @@ public class ShootRayCast : MonoBehaviour {
         image = GameObject.Find("Canvas").GetComponentInChildren<Image>();
         //image.sprite = canvasImages[2];
         m_AudioSource = GetComponent<AudioSource>();
-    }
+		laserholder.SetActive (false);
+	}
 	
 	// Update is called once per frame
 	void Update ()
     {
+		//drawlaser();
         if (Input.GetMouseButtonDown(0))
         {
             //image.sprite = canvasImages[0];
             push();
+			laserholder.SetActive (true);
             m_AudioSource.clip = pushSound;
             m_AudioSource.Play();
         }
@@ -35,12 +39,14 @@ public class ShootRayCast : MonoBehaviour {
         {
             //image.sprite = canvasImages[1];
             pull();
+			laserholder.SetActive (true);
             m_AudioSource.clip = pullSound;
             m_AudioSource.Play();
         }
         if(Input.GetMouseButtonUp(0) || Input.GetMouseButtonUp(1))
         {
             //image.sprite = canvasImages[2];
+			laserholder.SetActive(false);
         }
     }
 
@@ -50,7 +56,6 @@ public class ShootRayCast : MonoBehaviour {
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
         if(Physics.Raycast(transform.position, fwd, out hit, maxPowerDistance))
         {
-            
             if(hit.transform.tag.Equals("Metal"))
             {
                 Debug.Log("hit " + hit.transform.tag);
@@ -74,7 +79,6 @@ public class ShootRayCast : MonoBehaviour {
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
         if (Physics.Raycast(transform.position, fwd, out hit, maxPowerDistance))
         {
-
             if (hit.transform.tag.Equals("Metal"))
             {
                 float massDifference = hit.transform.GetComponent<Rigidbody>().mass - fPSController.GetComponent<Rigidbody>().mass;
