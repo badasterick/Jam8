@@ -14,9 +14,12 @@ public class CheckpointUpdateScript : MonoBehaviour {
 	
 	}
 
-	void OnTriggerEnter(Collider col)
-	{
-		if (col.gameObject.tag == "Player")
-			fpsController.GetComponent<ResetScript> ().lastCheckpoint = this.gameObject;
-	}
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            fpsController.GetComponent<ResetScript>().lastCheckpoint = this.gameObject;
+            GetComponent<AudioSource>().Play();
+        }
+    }
 }
