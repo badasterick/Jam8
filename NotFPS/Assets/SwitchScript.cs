@@ -4,10 +4,12 @@ using System.Collections;
 public class SwitchScript : MonoBehaviour {
 	public GameObject gate;
 	private bool pressed;
+    AudioSource a;
 	// Use this for initialization
 	void Start () 
 	{
 		pressed = false;
+        a = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -21,6 +23,7 @@ public class SwitchScript : MonoBehaviour {
 		{
 			gate.transform.position = gate.transform.position + new Vector3 (0, 5, 0);
 			pressed = true;
+            a.Play();
 		}
 	}
 
@@ -30,6 +33,7 @@ public class SwitchScript : MonoBehaviour {
 		{
 			gate.transform.position = gate.transform.position + new Vector3 (0, -5, 0);
 			pressed = false;
+            a.Play();
 		}
 	}
 }
