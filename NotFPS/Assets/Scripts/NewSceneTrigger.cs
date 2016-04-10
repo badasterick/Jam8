@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
+//using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class NewSceneTrigger : MonoBehaviour {
@@ -16,9 +16,10 @@ public class NewSceneTrigger : MonoBehaviour {
 
     void OnCollisionEnter(Collision collision)
     {
+        /*
         if (collision.gameObject.tag == "Player")
         {
             SceneManager.LoadScene("Scene2");
-        }
+        }*/
     }
 }

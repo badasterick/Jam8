@@ -14,7 +14,7 @@ public class ResetScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		if (this.transform.position.y < 5) 
+		if (this.transform.position.y < -105) 
 		{
 			this.transform.position = lastCheckpoint.transform.position;
 		}
