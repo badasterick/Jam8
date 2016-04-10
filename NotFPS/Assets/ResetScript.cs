@@ -16,7 +16,12 @@ public class ResetScript : MonoBehaviour {
 	{
 		if (this.transform.position.y < -105) 
 		{
-			this.transform.position = lastCheckpoint.transform.position;
+			ResetPosition ();
 		}
+	}
+
+	public void ResetPosition()
+	{
+		this.transform.position = lastCheckpoint.transform.position;
 	}
 }
