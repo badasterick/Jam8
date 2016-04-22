@@ -1,0 +1,12 @@
+{
+    "left": "LeftArrow",
+    "right": "RightArrow",
+    "up": "UpArrow",
+    "down": "DownArrow",
+    "mouse": true,
+    "enter": "Return",
+    "back": "Escape",
+    "jump": "Space",
+    "interact": "E",
+    "swap": "X"
+}

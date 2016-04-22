@@ -1,0 +1,13 @@
+{
+    "left-x": "Horizontal",
+    "left-y": "Vertical",
+    "right-x": "MacRightX",
+    "right-y": "MacRightY",
+    "left-trigger": "MacLeftTrigger",
+    "right-trigger": "MacRightTrigger",
+    "jump": 16,
+    "enter": 16,
+    "back": 17,
+    "swap": 18,
+    "interact": 19
+}
