@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		if (Input.GetJoystickNames ().Length > 0) {
+			Debug.Log("There's a controller");
 			myController = new GamepadController ();
 		} else {
 			myController = new KeyboardController ();

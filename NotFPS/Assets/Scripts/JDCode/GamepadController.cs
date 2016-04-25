@@ -25,6 +25,7 @@ public class GamepadController: GenericController {
 			str = new StreamReader ("Assets/Json/mac.json");
 		} else if (os.Contains ("Windows")) {
 			str = new StreamReader ("Assets/Json/windows.json");
+			Debug.Log("Windows");
 		} else if (os.Contains ("Linux")) {
 			str = new StreamReader ("Assets/Json/linux.json");
 		}
