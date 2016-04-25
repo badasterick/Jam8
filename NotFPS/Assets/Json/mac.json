@@ -8,6 +8,5 @@
     "jump": 16,
     "enter": 16,
     "back": 17,
-    "swap": 18,
     "interact": 19
 }

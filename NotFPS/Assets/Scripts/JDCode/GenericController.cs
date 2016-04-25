@@ -11,6 +11,8 @@ public class GenericController {
 	protected int enterKey;
 	public float maxRotSpeed = 90;
 	public float maxYLook = 45;
+	protected float hAngle = 0;
+	protected float vAngle = 0;
 	public virtual void LoadController() {
 	}
 

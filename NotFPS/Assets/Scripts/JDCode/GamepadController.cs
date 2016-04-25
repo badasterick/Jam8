@@ -14,8 +14,6 @@ public class GamepadController: GenericController {
 	public string ryAxis = "";
 	public string leftTrigger = "";
 	public string rightTrigger = "";
-	public float hAngle = 0;
-	public float vAngle = 0;
 
 	public override void LoadController() {
 		JSONNode jsn = null;

@@ -14,7 +14,10 @@ public class KeyboardController: GenericController{
 	protected new string interactKey;
 	protected new string swapKey;
 	private bool useMouse = false;
-
+	private float lookRectWidth = 100;
+	private float lookRectHeight = 100;
+	private Rect lookRect;
+	private Vector3 screenCenter;
 	public override void LoadController() {
 		JSONNode jsn = null;
 		StreamReader str = new StreamReader ("Assets/Json/keyboard.json");
@@ -34,8 +37,12 @@ public class KeyboardController: GenericController{
 			swapKey = jsn ["swap"];
 
 			pushKey = jsn ["push"].AsInt;
+
 			pullKey = jsn ["pull"].AsInt;
 
+			Vector3 lookRectSize = new Vector3 (lookRectWidth, lookRectHeight, 0);
+			screenCenter = new Vector3 (Screen.width, Screen.height, 0) / 2;
+			lookRect = new Rect (screenCenter - (lookRectSize / 2), lookRectSize);
 		}
 	}
 
@@ -113,7 +120,7 @@ public class KeyboardController: GenericController{
 		}
 	}
 
-	public virtual float PushForce {
+	public override float PushForce {
 		get {
 			return Input.GetMouseButton(pushKey) ? 1.0f : 0.0f;
 		}
@@ -123,5 +130,27 @@ public class KeyboardController: GenericController{
 		get {
 			return true;
 		}
+	}
+
+	public override void RotateCamera ()
+	{
+		Camera cam = Camera.main;
+
+		float horz = 0;
+		float vert = 0;
+
+	
+		Vector3 dif = Input.mousePosition - screenCenter;
+
+		horz = Input.GetAxis ("Mouse X");
+		vert = -Input.GetAxis ("Mouse Y");
+
+
+		hAngle += horz * maxRotSpeed * Time.deltaTime;
+		vAngle = Mathf.Clamp (vAngle + (vert * maxRotSpeed * Time.deltaTime), -maxYLook, maxYLook);
+
+		Quaternion spinQuat = Quaternion.AngleAxis (hAngle, Vector3.up);
+		Quaternion lookQuat = Quaternion.AngleAxis (vAngle, Vector3.right);
+		cam.transform.rotation = spinQuat * lookQuat;
 	}
 }

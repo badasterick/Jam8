@@ -1,12 +1,13 @@
 {
-    "left": "LeftArrow",
-    "right": "RightArrow",
-    "up": "UpArrow",
-    "down": "DownArrow",
+    "left": "A",
+    "right": "D",
+    "up": "W",
+    "down": "S",
     "mouse": true,
     "enter": "Return",
     "back": "Escape",
     "jump": "Space",
     "interact": "E",
-    "swap": "X"
+    "push": 0,
+    "pull": 1
 }
