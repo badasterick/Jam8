@@ -1,0 +1,11 @@
+{
+    "left-x": "Horizontal",
+    "left-y": "Vertical",
+    "right-x": 4,
+    "right-y": 5,
+    "jump": 0,
+    "enter": 0,
+    "back": 1,
+    "swap": 2,
+    "interact": 3
+}
