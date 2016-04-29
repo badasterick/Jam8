@@ -1,21 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
 	GenericController myController;
 	Camera mainCam;
-	private float yVel = 0;
 	private Vector3 velocity = Vector3.zero;
 	private Vector3 totalForce = Vector3.zero;
 	public float moveForce = 50;
 	public float slowDown = 10;
 	private float mass = 10;
 	public float maxSpeed = 10;
-	public float minSpeedBeforeStopping = 0.01f;
+
 	public GameObject laserholder;
 	public ParticleSystem partSys;
+
 
 	public float maxPowerDistance = 10.0f;
 	public AudioClip pushSound;
@@ -24,11 +26,14 @@ public class PlayerController : MonoBehaviour {
 	private GameObject target = null;
 	private Color orangeColor = new Color( 255f / 255f, 150f / 255f, 0);
 	private Color lightBlueColor = new Color(0, 191f / 255f, 1f);
+
+	private Rigidbody myRigidBody;
 	// Use this for initialization
 	void Start () {
 		Cursor.visible = false;
 		partSys = laserholder.GetComponent<ParticleSystem> ();
 		partSys.startSpeed = 50;
+
 		laserholder.SetActive (false);
 		if (Input.GetJoystickNames ().Length > 0) {
 			myController = new GamepadController ();
@@ -37,6 +42,7 @@ public class PlayerController : MonoBehaviour {
 		}
 
 		myController.LoadController ();
+		myRigidBody = GetComponent<Rigidbody> ();
 		mainCam = Camera.main;
 	}
 	
@@ -45,17 +51,9 @@ public class PlayerController : MonoBehaviour {
 		myController.RotateCamera ();
 		CheckForTarget ();
 		totalForce = Vector3.zero;
-		Vector3 hvForce = (mainCam.transform.forward * myController.Vertical) + (mainCam.transform.right * myController.Horizontal);
-		hvForce.y = 0;
-
-		if (hvForce.magnitude == 0) {
-			hvForce = -velocity.normalized * slowDown;
-		}
-		AddForce (hvForce.normalized * moveForce);
-
-
-		//Vector3 vel = ((mainCam.transform.forward * myController.Vertical) + (mainCam.transform.right * myController.Horizontal));
-		//transform.position += new Vector3 (vel.x, 0, vel.z).normalized * 20 * Time.deltaTime;
+		velocity = (myController.Vertical * mainCam.transform.forward + myController.Horizontal * mainCam.transform.right);
+		velocity.y = 0;
+		velocity = velocity.normalized * maxSpeed;
 
 		if (myController.PushForce > 0 && target != null)
 		{
@@ -75,14 +73,32 @@ public class PlayerController : MonoBehaviour {
 			//m_AudioSource.Play();
 		}
 	
-		if(Input.GetMouseButtonUp(0) || Input.GetMouseButtonUp(1) || target == null)
-		{
-			laserholder.SetActive(false);
+		if ((myController.PullForce <= 0 && myController.PushForce <= 0) || target == null) {
+			laserholder.SetActive (false);
 		}
 
+		if (partSys.isPlaying) {
+
+			ParticleSystem.Particle[] tempArr = new ParticleSystem.Particle[partSys.particleCount];
+			partSys.GetParticles (tempArr);
+			List<ParticleSystem.Particle> particles = tempArr.ToList();
+			List<ParticleSystem.Particle> tempList = tempArr.ToList();
+			Vector3 bdif = target.transform.position - transform.position;
+			foreach (ParticleSystem.Particle p in tempArr) {
+				Vector3 dif = p.position - transform.position;
+
+				if (Vector3.Dot (dif, bdif.normalized) >= Vector3.Distance(transform.position, target.transform.position)) {
+					
+					particles.Remove (p);
+				}
+			}
+
+			partSys.SetParticles (particles.ToArray (), particles.Count);
+
+		}
 		velocity += totalForce * Time.deltaTime / mass;
 		ClampVelocity ();
-		transform.position += velocity * Time.deltaTime;
+		myRigidBody.velocity = velocity;
 	}
 
 	void AddForce(Vector3 force) {
@@ -92,8 +108,6 @@ public class PlayerController : MonoBehaviour {
 	void ClampVelocity() {
 		if (velocity.magnitude > maxSpeed) {
 			velocity = velocity.normalized * maxSpeed;
-		} else if (velocity.magnitude < minSpeedBeforeStopping) {
-			velocity = Vector3.zero;
 		}
 	}
 
@@ -104,14 +118,17 @@ public class PlayerController : MonoBehaviour {
 		if (Physics.Raycast (transform.position, fwd, out hit, maxPowerDistance)) {
 			if (hit.collider.CompareTag ("Metal")) {
 				GameObject hitTarget = hit.collider.gameObject;
-				float twoFiveFive = 255f;
+			
 				if (hitTarget != target) {
 					if (target != null) {
 						target.GetComponent<Renderer> ().material.color = orangeColor;
 					}
 					partSys.startLifetime = partSys.startSpeed / hit.distance;
+			
+
 					hitTarget.GetComponent<Renderer> ().material.color = lightBlueColor;
 					target = hitTarget;
+
 				}
 			} else if (target != null) {
 				target.GetComponent<Renderer> ().material.color = orangeColor;

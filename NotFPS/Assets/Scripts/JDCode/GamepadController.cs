@@ -41,7 +41,6 @@ public class GamepadController: GenericController {
 			rxAxis = jsn ["right-x"];
 			ryAxis = jsn ["right-y"];
 			leftTrigger = jsn ["left-trigger"];
-			Debug.Log (leftTrigger);
 			rightTrigger = jsn ["right-trigger"];
 		}
 	}
