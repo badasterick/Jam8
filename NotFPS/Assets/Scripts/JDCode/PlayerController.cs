@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour {
 	public float maxSpeed = 10;
 	public float minSpeedBeforeStopping = 0.01f;
 	public GameObject laserholder;
+	public ParticleSystem partSys;
 
 	public float maxPowerDistance = 10.0f;
 	public AudioClip pushSound;
@@ -26,6 +27,8 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		Cursor.visible = false;
+		partSys = laserholder.GetComponent<ParticleSystem> ();
+		partSys.startSpeed = 50;
 		laserholder.SetActive (false);
 		if (Input.GetJoystickNames ().Length > 0) {
 			myController = new GamepadController ();
@@ -56,6 +59,7 @@ public class PlayerController : MonoBehaviour {
 
 		if (myController.PushForce > 0 && target != null)
 		{
+			
 			push();
 			laserholder.SetActive (true);
 			//m_AudioSource.clip = pushSound;
@@ -66,11 +70,12 @@ public class PlayerController : MonoBehaviour {
 		{
 			pull();
 			laserholder.SetActive (true);
+
 			//m_AudioSource.clip = pullSound;
 			//m_AudioSource.Play();
 		}
 	
-		if(Input.GetMouseButtonUp(0) || Input.GetMouseButtonUp(1))
+		if(Input.GetMouseButtonUp(0) || Input.GetMouseButtonUp(1) || target == null)
 		{
 			laserholder.SetActive(false);
 		}
@@ -95,6 +100,7 @@ public class PlayerController : MonoBehaviour {
 	void CheckForTarget() {
 		Vector3 fwd = Camera.main.transform.forward;
 		RaycastHit hit;
+
 		if (Physics.Raycast (transform.position, fwd, out hit, maxPowerDistance)) {
 			if (hit.collider.CompareTag ("Metal")) {
 				GameObject hitTarget = hit.collider.gameObject;
@@ -103,6 +109,7 @@ public class PlayerController : MonoBehaviour {
 					if (target != null) {
 						target.GetComponent<Renderer> ().material.color = orangeColor;
 					}
+					partSys.startLifetime = partSys.startSpeed / hit.distance;
 					hitTarget.GetComponent<Renderer> ().material.color = lightBlueColor;
 					target = hitTarget;
 				}
