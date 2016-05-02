@@ -14,10 +14,12 @@ public class PlayerController : MonoBehaviour {
 	public float slowDown = 10;
 	private float mass = 10;
 	public float maxSpeed = 10;
+	public float jumpSpeed = 5;
+	public float gravity = 10;
 
 	public GameObject laserholder;
 	public ParticleSystem partSys;
-
+	private float height;
 
 	public float maxPowerDistance = 10.0f;
 	public AudioClip pushSound;
@@ -27,6 +29,7 @@ public class PlayerController : MonoBehaviour {
 	private Color orangeColor = new Color( 255f / 255f, 150f / 255f, 0);
 	private Color lightBlueColor = new Color(0, 191f / 255f, 1f);
 
+	private bool onGround = true;
 	private Rigidbody myRigidBody;
 	// Use this for initialization
 	void Start () {
@@ -44,20 +47,43 @@ public class PlayerController : MonoBehaviour {
 		myController.LoadController ();
 		myRigidBody = GetComponent<Rigidbody> ();
 		mainCam = Camera.main;
+		height = GetComponent<CapsuleCollider>().bounds.size.y / 2;
+		Debug.Log ("Height: " + height);
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		RaycastHit hit;
+		onGround = Physics.Raycast (transform.position, Vector3.down, out hit, height + float.Epsilon);
 		myController.RotateCamera ();
 		CheckForTarget ();
 		totalForce = Vector3.zero;
-		velocity = (myController.Vertical * mainCam.transform.forward + myController.Horizontal * mainCam.transform.right);
-		velocity.y = 0;
-		velocity = velocity.normalized * maxSpeed;
+		if (onGround) {
+			float newY = hit.transform.position.y + hit.collider.bounds.size.y / 2 + height;
+			transform.position = new Vector3 (transform.position.x, newY, transform.position.z);
+			velocity = (myController.Vertical * Forward + myController.Horizontal * Right);
+
+
+
+
+			velocity = velocity.normalized * maxSpeed;
+
+			
+			if (myController.IsJumpDown) {
+				velocity.y = jumpSpeed;
+			} else {
+				velocity.y = 0;
+			}
+			
+
+
+		} else {
+			velocity.y -= gravity * Time.deltaTime;
+		}
 
 		if (myController.PushForce > 0 && target != null)
 		{
-			
+
 			push();
 			laserholder.SetActive (true);
 			//m_AudioSource.clip = pushSound;
@@ -204,5 +230,22 @@ public class PlayerController : MonoBehaviour {
 				}
 			}
 		}*/
+	}
+
+	public Vector3 Forward {
+		get {
+			Vector3 fwd = Camera.main.transform.forward;
+			fwd.y = 0;
+			return fwd.normalized;
+		}
+	}
+
+	public Vector3 Right {
+		get {
+			
+			Vector3 rit = Camera.main.transform.right;
+			rit.y = 0;
+			return rit.normalized;
+		}
 	}
 }
