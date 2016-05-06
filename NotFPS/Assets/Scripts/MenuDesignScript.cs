@@ -32,7 +32,7 @@ public class MenuDesignScript : MonoBehaviour {
 				if (hit.collider.gameObject == this.gameObject) {
 					Debug.Log ("You selected the " + hit.transform.name); // ensure you picked right object
 					InvokeRepeating ("MoveDoor", 0f, 0.05f);
-					Invoke ("LoadScene", 3f);
+					Invoke ("LoadScene", 1.5f);
 				}
 				if (hit.collider.gameObject == exit.gameObject) {
 					Debug.Log ("You selected the " + hit.transform.name); // ensure you picked right object
