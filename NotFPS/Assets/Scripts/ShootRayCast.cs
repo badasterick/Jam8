@@ -7,8 +7,7 @@ public class ShootRayCast : MonoBehaviour {
     public GameObject fPSController;
     public GameObject canvasObject;
 	public GameObject laserholder;
-    public Sprite[] canvasImages;
-    private Image image;
+ 
     public float maxPowerDistance = 10.0f;
     public AudioClip pushSound;
     public AudioClip pullSound;
@@ -17,8 +16,6 @@ public class ShootRayCast : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-        image = GameObject.Find("Canvas").GetComponentInChildren<Image>();
-        //image.sprite = canvasImages[2];
         m_AudioSource = GetComponent<AudioSource>();
 		laserholder.SetActive (false);
 	}
@@ -30,7 +27,6 @@ public class ShootRayCast : MonoBehaviour {
 		LookForTarget();
         if (Input.GetMouseButtonDown(0))
         {
-            //image.sprite = canvasImages[0];
             push();
 			laserholder.SetActive (true);
             m_AudioSource.clip = pushSound;
@@ -38,7 +34,6 @@ public class ShootRayCast : MonoBehaviour {
         }
         if (Input.GetMouseButtonDown(1))
         {
-            //image.sprite = canvasImages[1];
             pull();
 			laserholder.SetActive (true);
             m_AudioSource.clip = pullSound;
@@ -46,7 +41,6 @@ public class ShootRayCast : MonoBehaviour {
         }
         if(Input.GetMouseButtonUp(0) || Input.GetMouseButtonUp(1))
         {
-            //image.sprite = canvasImages[2];
 			laserholder.SetActive(false);
         }
     }
@@ -59,7 +53,6 @@ public class ShootRayCast : MonoBehaviour {
         {
             if(hit.transform.tag.Equals("Metal"))
             {
-                Debug.Log("hit " + hit.transform.tag);
                 float massDifference = hit.transform.GetComponent<Rigidbody>().mass - fPSController.GetComponent<Rigidbody>().mass;
                 if (massDifference < 0)
                 {
