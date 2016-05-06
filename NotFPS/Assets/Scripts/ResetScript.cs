@@ -1,13 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class ResetScript : MonoBehaviour {
 
 	public GameObject lastCheckpoint;
+
 	// Use this for initialization
 	void Start () 
 	{
-		
 	
 	}
 	
@@ -22,6 +23,8 @@ public class ResetScript : MonoBehaviour {
 
 	public void ResetPosition()
 	{
-		this.transform.position = lastCheckpoint.transform.position;
+		CheckpointUpdateScript checkpoint = lastCheckpoint.GetComponent<CheckpointUpdateScript> ();
+		transform.position = checkpoint.transform.position;
+		GetComponent<RigidbodyFirstPersonController> ().ResetPlayer (checkpoint.forward);
 	}
 }
