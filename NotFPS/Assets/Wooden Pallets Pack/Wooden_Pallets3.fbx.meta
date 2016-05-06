@@ -3,7 +3,15 @@ guid: 91acf39212f06f4418a10bae6150aa2c
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: //RootNode
+    100002: woodenpallets1
+    400000: //RootNode
+    400002: woodenpallets1
+    2300000: woodenpallets1
+    3300000: woodenpallets1
     4300000: woodenpallets1
+    7400000: Default Take
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 3

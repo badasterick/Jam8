@@ -4,6 +4,7 @@ using System.Collections;
 public class CheckpointUpdateScript : MonoBehaviour {
 
 	public GameObject fpsController;
+	public Vector3 forward = Vector3.forward;
 	// Use this for initialization
 	void Start () {
 	
@@ -18,7 +19,7 @@ public class CheckpointUpdateScript : MonoBehaviour {
     {
         if (col.gameObject.tag == "Player")
         {
-            fpsController.GetComponent<ResetScript>().lastCheckpoint = this.gameObject;
+			fpsController.GetComponent<ResetScript> ().lastCheckpoint = gameObject;
             GetComponent<AudioSource>().Play();
         }
     }

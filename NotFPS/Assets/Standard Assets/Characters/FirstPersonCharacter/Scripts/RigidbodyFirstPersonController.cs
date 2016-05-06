@@ -119,8 +119,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 #endif
             }
         }
-
-
+			
         private void Start()
         {
             m_RigidBody = GetComponent<Rigidbody>();
@@ -136,7 +135,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void Update()
         {
-            RotateView();
+			
+			RotateView ();
+			
 
             if (CrossPlatformInputManager.GetButtonDown("Jump") && !m_Jump)
             {
@@ -289,5 +290,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 PlayLandingSound();
             }
         }
+
+		public void ResetPlayer(Vector3 fwd) {
+			float ang = Mathf.Atan2 (fwd.z, fwd.x) * 180 / Mathf.PI;
+			Debug.Log(ang);
+			transform.localRotation = Quaternion.AngleAxis (ang, Vector3.up);
+			cam.transform.localRotation = Quaternion.AngleAxis (ang, Vector3.up);
+			mouseLook.Init (transform, cam.transform);
+		}
     }
 }

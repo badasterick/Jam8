@@ -4,7 +4,6 @@ using System.Collections;
 public class PressureSwitch : MonoBehaviour {
 	public GameObject activatedObject;
 	private ActivatableObject ao; 
-	private bool pressed = false;
 	private int numberOfItemsOnTop = 0;
 	// Use this for initialization
 	void Start () {
