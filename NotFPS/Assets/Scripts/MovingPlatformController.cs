@@ -3,6 +3,7 @@ using System.Collections;
 
 public class MovingPlatformController : MonoBehaviour, ActivatableObject {
 	public bool isOn = true;
+	public bool doesntDeactivate = false;
 	public Vector3 startPosition;
 	public Vector3 endPosition;
 	public float moveTime = 1.0f;
@@ -15,7 +16,6 @@ public class MovingPlatformController : MonoBehaviour, ActivatableObject {
 		travelDistance = endPosition - startPosition;
 
 		moveSpeed = travelDistance / moveTime;
-		Debug.Log ("My Position: " + transform.position);
 	}
 	
 	// Update is called once per frame
@@ -30,7 +30,6 @@ public class MovingPlatformController : MonoBehaviour, ActivatableObject {
 				|| (!movingForward && Vector3.Dot (eDif, -travelDistance.normalized) >= travelDistance.magnitude)) {
 				moveSpeed *= -1;
 				movingForward = !movingForward;
-				Debug.Log ("Swapping");
 			}
 
 		}
@@ -50,6 +49,8 @@ public class MovingPlatformController : MonoBehaviour, ActivatableObject {
 	}
 
 	public void DeactivateObject() {
-		isActivated = false;
+		if (!doesntDeactivate) {
+			isActivated = false;
+		}
 	}
 }
