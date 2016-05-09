@@ -3,13 +3,13 @@ using System.Collections;
 using UnityStandardAssets.Characters.FirstPerson;
 
 public class ResetScript : MonoBehaviour {
-
+	public AudioClip bgm;
 	public GameObject lastCheckpoint;
 
 	// Use this for initialization
 	void Start () 
 	{
-	
+		AudioManager.Instance.PlayBGM (bgm);
 	}
 	
 	// Update is called once per frame
@@ -20,7 +20,7 @@ public class ResetScript : MonoBehaviour {
 			ResetPosition ();
 		}
 	}
-
+		
 	public void ResetPosition()
 	{
 		CheckpointUpdateScript checkpoint = lastCheckpoint.GetComponent<CheckpointUpdateScript> ();
