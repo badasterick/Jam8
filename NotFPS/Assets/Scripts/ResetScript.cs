@@ -9,7 +9,9 @@ public class ResetScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		AudioManager.Instance.PlayBGM (bgm);
+		if (AudioManager.Instance != null) {
+			AudioManager.Instance.PlayBGM (bgm);
+		}
 	}
 	
 	// Update is called once per frame
