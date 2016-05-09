@@ -7,7 +7,7 @@ public class AudioManager : MonoBehaviour {
 	private static AudioManager instance;
 	private AudioSource bgmSource;
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		AudioManager.instance = this;
 		bgmSource = GetComponent<AudioSource> ();
 	}

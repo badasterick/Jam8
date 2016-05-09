@@ -43,10 +43,6 @@ public class PickAndMove : MonoBehaviour
                 {
                     if (distanceFromPlayer < distanceToHold)
                         StartCoroutine(mouseDown(hit.transform));
-
-                    if (!Input.GetMouseButton(0))
-                    {// isColloiding = false;
-                    }
                 }
 
             }
@@ -58,7 +54,7 @@ public class PickAndMove : MonoBehaviour
 
     IEnumerator mouseDown(Transform hit)
     {
-        while (Input.GetMouseButton(0))
+        while (Input.GetMouseButton(1))
         {
             //if(!isColloiding)
             MoveUpdate(hit);
