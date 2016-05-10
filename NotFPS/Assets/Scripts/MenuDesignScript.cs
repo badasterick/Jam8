@@ -55,7 +55,7 @@ public class MenuDesignScript : MonoBehaviour {
 	}
 
 	void LoadScene(){
-		SceneManager.LoadScene(0);
+		SceneManager.LoadScene(1);
 
 	}
 }

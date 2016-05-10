@@ -14,7 +14,7 @@ public class ReturnScript : MonoBehaviour {
 	}
 
 	public void ReturnGam(){
-		SceneManager.LoadScene (1);
+		SceneManager.LoadScene (0);
 
 	}
 }
