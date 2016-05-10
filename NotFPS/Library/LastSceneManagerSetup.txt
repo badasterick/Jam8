@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/MenuDesignTest.unity
+=======
+- path: Assets/Scenes/LevelDesign.unity
+>>>>>>> 9079322fa22ac98c06ec4cdcd7214fbc1731e642
   isLoaded: 1
   isActive: 1
